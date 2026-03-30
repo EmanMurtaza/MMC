@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Murtaza Medical Complex — Bahria Town Phase 8, Rawalpindi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:    #1a5fa0;
+      --blue-d:  #113d6b;
+      --blue-l:  #cfe0f5;
+      --blue-xl: #edf4fc;
+      --white:   #ffffff;
+      --ink:     #0f1c2e;
+      --body:    #384655;
+      --muted:   #7a8fa0;
+      --border:  #d0dde8;
+      --accent:  #c0812a;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Outfit', sans-serif;
+      --radius:  6px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); color: var(--body); background: var(--white); overflow-x: hidden; }
+
+    .topbar {
+      background: var(--blue-d); color: rgba(255,255,255,.75);
+      font-size: .78rem; letter-spacing: .03em;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .55rem 3rem;
+    }
+    .topbar a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .topbar a:hover { color: #fff; }
+    .topbar-right { display: flex; gap: 2rem; align-items: center; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white); box-shadow: 0 1px 0 var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 3rem; animation: fadeDown .6s ease both;
+    }
+    .nav-brand { display: flex; align-items: center; gap: .9rem; text-decoration: none; }
+    .nav-logo-icon {
+      width: 44px; height: 44px; background: var(--blue); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-family: var(--serif); font-size: 1.3rem; font-weight: 700; flex-shrink: 0;
+    }
+    .nav-brand-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: var(--blue-d); display: block; }
+    .nav-brand-sub  { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .86rem; color: var(--body); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-appt { background: var(--blue); color: #fff; padding: .65rem 1.5rem; border-radius: var(--radius); font-size: .85rem; font-weight: 500; text-decoration: none; transition: background .2s; }
+    .nav-appt:hover { background: var(--blue-d); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--blue-d) 0%, var(--blue) 60%, #2a80c8 100%);
+      position: relative; overflow: hidden; padding: 5.5rem 3rem 4rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 70% at 80% 50%, rgba(255,255,255,.08) 0%, transparent 60%),
+                  radial-gradient(ellipse 30% 50% at 10% 80%, rgba(0,0,0,.1) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg,  rgba(255,255,255,.025) 0px, rgba(255,255,255,.025) 1px, transparent 1px, transparent 40px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0px, rgba(255,255,255,.025) 1px, transparent 1px, transparent 40px);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+      border-radius: 100px; padding: .35rem .9rem;
+      font-size: .75rem; letter-spacing: .06em; text-transform: uppercase;
+      color: rgba(255,255,255,.9); margin-bottom: 1.5rem;
+      animation: fadeUp .8s .1s ease both;
+    }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #90d4ff; animation: pulse 2s infinite; }
+    .hero-title { font-family: var(--serif); font-size: clamp(2.4rem, 4.5vw, 3.8rem); font-weight: 700; line-height: 1.1; color: #fff; animation: fadeUp .8s .2s ease both; }
+    .hero-title em { font-style: italic; color: rgba(255,255,255,.75); }
+    .hero-sub { margin-top: 1.2rem; font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,.75); max-width: 44ch; animation: fadeUp .8s .35s ease both; }
+    .hero-info { margin-top: 2rem; display: flex; flex-direction: column; gap: .75rem; animation: fadeUp .8s .5s ease both; }
+    .hero-info-item { display: flex; align-items: center; gap: .7rem; font-size: .88rem; color: rgba(255,255,255,.8); }
+    .hero-info-icon { width: 30px; height: 30px; background: rgba(255,255,255,.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .85rem; flex-shrink: 0; }
+    .hero-actions { margin-top: 2.2rem; display: flex; gap: 1rem; animation: fadeUp .8s .6s ease both; }
+    .btn-white { background: #fff; color: var(--blue-d); padding: .8rem 1.8rem; border-radius: var(--radius); font-size: .9rem; font-weight: 600; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .btn-outline-white { border: 1.5px solid rgba(255,255,255,.4); color: #fff; padding: .8rem 1.8rem; border-radius: var(--radius); font-size: .9rem; text-decoration: none; transition: background .2s; }
+    .btn-outline-white:hover { background: rgba(255,255,255,.1); }
+
+    .appt-card {
+      position: relative; z-index: 1;
+      background: #fff; border-radius: 12px; box-shadow: 0 24px 64px rgba(0,0,0,.25);
+      padding: 2.2rem; animation: fadeIn .9s .4s ease both;
+    }
+    .appt-card-header { display: flex; align-items: center; gap: .7rem; margin-bottom: 1.5rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--border); }
+    .appt-card-icon { width: 38px; height: 38px; background: var(--blue-xl); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+    .appt-card-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: var(--blue-d); }
+    .appt-card-sub { font-size: .78rem; color: var(--muted); }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+    .form-group { display: flex; flex-direction: column; gap: .35rem; margin-bottom: .85rem; }
+    .form-group label { font-size: .78rem; font-weight: 500; color: var(--body); letter-spacing: .03em; }
+    .form-group label span { color: #e05252; }
+    .form-control {
+      padding: .65rem .9rem; border: 1.5px solid var(--border); border-radius: var(--radius);
+      font-family: var(--sans); font-size: .88rem; color: var(--ink); background: #fff;
+      outline: none; transition: border-color .2s, box-shadow .2s; width: 100%;
+    }
+    .form-control:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,95,160,.1); }
+    .form-control::placeholder { color: #b0bfcf; }
+    select.form-control { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237a8fa0' d='M1 1l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .9rem center; padding-right: 2.2rem; }
+    textarea.form-control { resize: vertical; }
+    .submit-btn { width: 100%; background: #25d366; color: #fff; border: none; padding: .9rem; border-radius: var(--radius); font-family: var(--sans); font-size: .95rem; font-weight: 600; cursor: pointer; transition: background .2s, transform .15s; margin-top: .3rem; display: flex; align-items: center; justify-content: center; gap: .5rem; }
+    .submit-btn:hover { background: #1da851; transform: translateY(-1px); }
+    .form-note { text-align: center; font-size: .72rem; color: var(--muted); margin-top: .7rem; }
+    .success-msg { display: none; background: #eef5fc; border: 1px solid #a0c8e8; border-radius: var(--radius); padding: 1.5rem; text-align: center; }
+    .success-msg .check { font-size: 2rem; margin-bottom: .5rem; }
+    .success-msg h3 { font-family: var(--serif); font-size: 1.2rem; color: var(--blue-d); }
+    .success-msg p { font-size: .84rem; color: var(--body); margin-top: .4rem; }
+
+    .section { padding: 5.5rem 3rem; max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--blue); font-weight: 600; margin-bottom: .7rem; }
+    .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.7rem); font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .section-subtitle { margin-top: .8rem; font-size: .95rem; line-height: 1.7; color: var(--muted); max-width: 55ch; }
+
+    .services-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .service-card { background: var(--blue-xl); border: 1px solid var(--blue-l); border-radius: 10px; padding: 2rem 1.8rem; transition: transform .25s, box-shadow .25s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,95,160,.12); }
+    .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .service-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--blue-d); margin-bottom: .5rem; }
+    .service-desc { font-size: .85rem; line-height: 1.65; color: var(--body); }
+
+    .doctors-section { background: var(--ink); padding: 5.5rem 3rem; }
+    .doctors-inner { max-width: 1200px; margin: 0 auto; }
+    .doctors-section .section-label { color: #90d4ff; }
+    .doctors-section .section-title { color: #fff; }
+    .doctors-section .section-subtitle { color: rgba(255,255,255,.55); }
+    .doctors-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .doctor-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: 2rem; display: flex; gap: 1.5rem; align-items: flex-start; transition: background .25s; }
+    .doctor-card:hover { background: rgba(255,255,255,.08); }
+    .doctor-avatar { width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--blue-d)); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: #fff; flex-shrink: 0; }
+    .doctor-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: .25rem; }
+    .doctor-specialty { font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: #90d4ff; margin-bottom: .6rem; }
+    .doctor-quals { font-size: .82rem; line-height: 1.6; color: rgba(255,255,255,.55); }
+
+    .stats-bar { background: var(--blue); padding: 3rem; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 2rem; }
+    .stat-val { font-family: var(--serif); font-size: 2.8rem; font-weight: 700; color: #fff; line-height: 1; }
+    .stat-label { margin-top: .4rem; font-size: .8rem; color: rgba(255,255,255,.7); letter-spacing: .06em; text-transform: uppercase; }
+
+    .whyus-section { padding: 5.5rem 3rem; background: var(--blue-xl); }
+    .whyus-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .whyus-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.4rem; }
+    .why-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .why-num { width: 32px; height: 32px; border-radius: 50%; background: var(--blue); color: #fff; font-size: .78rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .why-text h4 { font-weight: 600; color: var(--ink); margin-bottom: .25rem; }
+    .why-text p { font-size: .85rem; color: var(--body); line-height: 1.6; }
+    .whyus-visual { background: var(--blue-d); border-radius: 12px; padding: 2.5rem; color: #fff; position: relative; overflow: hidden; }
+    .hours-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: .5rem; }
+    .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px solid rgba(255,255,255,.1); font-size: .88rem; color: rgba(255,255,255,.8); }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-open { color: #90d4ff; font-weight: 500; }
+    .emergency-badge { margin-top: 1.5rem; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); padding: 1rem 1.2rem; font-size: .84rem; color: rgba(255,255,255,.8); display: flex; align-items: center; gap: .6rem; }
+    .emergency-badge strong { color: #fff; }
+
+    .location-section { padding: 5.5rem 3rem; max-width: 1200px; margin: 0 auto; }
+    .location-grid { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .location-info { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .contact-icon { width: 44px; height: 44px; background: var(--blue-xl); border: 1px solid var(--blue-l); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: .2rem; }
+    .contact-val { font-size: .95rem; color: var(--ink); font-weight: 500; }
+    .contact-val a { color: var(--blue); text-decoration: none; }
+    .contact-val a:hover { text-decoration: underline; }
+    .map-wrap { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); height: 340px; }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    footer { background: var(--ink); padding: 4rem 3rem 2rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .footer-brand-name { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: .5rem; }
+    .footer-brand-desc { font-size: .83rem; line-height: 1.65; color: rgba(255,255,255,.45); max-width: 34ch; }
+    .footer-social { margin-top: 1.2rem; display: flex; gap: .7rem; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); display: flex; align-items: center; justify-content: center; font-size: .95rem; text-decoration: none; transition: background .2s, border-color .2s; }
+    .footer-social .fb:hover  { background: #1877f2; border-color: #1877f2; }
+    .footer-social .wa:hover  { background: #25d366; border-color: #25d366; }
+    .footer-col-title { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 1rem; font-weight: 600; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; }
+    .footer-col ul a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; font-size: .75rem; color: rgba(255,255,255,.3); }
+
+    @keyframes fadeDown { from { opacity:0; transform:translateY(-12px);} to { opacity:1; transform:none;} }
+    @keyframes fadeUp   { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:none;} }
+    @keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+    @keyframes pulse    { 0%,100% { opacity:1; } 50% { opacity:.4; } }
+
+    @media (max-width: 960px) {
+      .topbar { display: none; }
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 5rem 1.5rem 3rem; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .doctors-grid { grid-template-columns: 1fr; }
+      .stats-bar { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .whyus-inner { grid-template-columns: 1fr; }
+      .location-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .section { padding: 4rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <span>📍 Abu-Bakr Avenue Commercial, Phase 8 Bahria Town, Rawalpindi</span>
+    <div class="topbar-right">
+      <span>🕐 Emergency: 24/7</span>
+      <a href="tel:03301531097">📞 0330-1531097</a>
+      <a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener">📘 Facebook</a>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#" class="nav-brand">
+      <div class="nav-logo-icon">M</div>
+      <div>
+        <span class="nav-brand-name">Murtaza Medical Complex</span>
+        <span class="nav-brand-sub">Bahria Town Phase 8 · Rawalpindi</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#doctors">Doctors</a></li>
+      <li><a href="#location">Contact</a></li>
+    </ul>
+    <a href="#appointment" class="nav-appt">Book Appointment</a>
+  </nav>
+
+  <section class="hero" id="appointment">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Accepting New Patients</div>
+      <h1 class="hero-title">Quality Healthcare<br/><em>Close to Home.</em></h1>
+      <p class="hero-sub">A multi-disciplinary health facility serving Bahria Town Phase 8 and the twin-city community, with a special focus on Diabetes &amp; Gastroenterology care.</p>
+      <div class="hero-info">
+        <div class="hero-info-item"><div class="hero-info-icon">📍</div>Abu-Bakr Avenue Commercial, Phase 8, Bahria Town, Rawalpindi</div>
+        <div class="hero-info-item"><div class="hero-info-icon">🕐</div>Emergency services available 24/7</div>
+        <div class="hero-info-item"><div class="hero-info-icon">📞</div>0330-1531097</div>
+      </div>
+      <div class="hero-actions">
+        <a href="#appointment" class="btn-white">Book an Appointment</a>
+        <a href="#services" class="btn-outline-white">Our Services</a>
+      </div>
+    </div>
+
+    <div class="appt-card">
+      <div class="appt-card-header">
+        <div class="appt-card-icon">🗓️</div>
+        <div>
+          <div class="appt-card-title">Book Appointment</div>
+          <div class="appt-card-sub">Sent directly to our team via WhatsApp</div>
+        </div>
+      </div>
+      <form id="apptForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name <span>*</span></label>
+            <input type="text" id="f_name" class="form-control" placeholder="e.g. Ahmad Ali" required/>
+          </div>
+          <div class="form-group">
+            <label>Phone Number <span>*</span></label>
+            <input type="tel" id="f_phone" class="form-control" placeholder="03XX-XXXXXXX" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" id="f_age" class="form-control" placeholder="Your age" min="1" max="120"/>
+          </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <select id="f_gender" class="form-control">
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Department / Specialty <span>*</span></label>
+          <select id="f_dept" class="form-control" required>
+            <option value="">Select department</option>
+            <option>General Medicine</option>
+            <option>Diabetes &amp; Endocrinology</option>
+            <option>Gastroenterology</option>
+            <option>Radiology &amp; Diagnostics</option>
+            <option>Ultrasound</option>
+            <option>Psychology / Counselling</option>
+            <option>Emergency / Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Preferred Date <span>*</span></label>
+            <input type="date" id="f_date" class="form-control" required/>
+          </div>
+          <div class="form-group">
+            <label>Preferred Time</label>
+            <select id="f_time" class="form-control">
+              <option value="">Any time</option>
+              <option>Morning (9am – 12pm)</option>
+              <option>Afternoon (12pm – 4pm)</option>
+              <option>Evening (4pm – 8pm)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Brief Description of Concern</label>
+          <textarea id="f_concern" class="form-control" rows="2" placeholder="Symptoms or reason for visit (optional)"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.4A12.1 12.1 0 0 0 12 0 12 12 0 0 0 1.7 18L0 24l6.3-1.7A12 12 0 0 0 24 12a12 12 0 0 0-3.5-8.6zM12 22a10 10 0 0 1-5.2-1.4l-.4-.2-3.7 1 1-3.7-.3-.4A10 10 0 1 1 12 22zm5.5-7.5c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7 0a8.3 8.3 0 0 1-4.1-3.6c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4a3.8 3.8 0 0 0-1.2 2.9 6.6 6.6 0 0 0 1.4 3.5 15.2 15.2 0 0 0 5.8 5.1c2.2.9 2.2.6 2.6.6a3.5 3.5 0 0 0 2.3-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.1-.3-.2-.5-.3z"/></svg>
+          Send via WhatsApp
+        </button>
+        <p class="form-note">🔒 Your details go directly to our clinic's WhatsApp.</p>
+      </form>
+      <div class="success-msg" id="successMsg">
+        <div class="check">✅</div>
+        <h3>Appointment Sent!</h3>
+        <p>Your request has been sent to the clinic via WhatsApp. Our team will confirm your appointment shortly.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-bar">
+    <div><div class="stat-val">24/7</div><div class="stat-label">Emergency Care</div></div>
+    <div><div class="stat-val">2021</div><div class="stat-label">Established</div></div>
+    <div><div class="stat-val">Rs.2500</div><div class="stat-label">Consultation Fee</div></div>
+    <div><div class="stat-val">4+</div><div class="stat-label">Specialist Doctors</div></div>
+  </div>
+
+  <section class="section" id="services">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Comprehensive Medical Services</h2>
+    <p class="section-subtitle">Delivering high-quality, affordable healthcare with a focus on the needs of the local Bahria Town community.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">🩺</div><div class="service-name">General Medicine</div><p class="service-desc">Expert consultation for general health concerns, routine checkups, and management of common illnesses.</p></div>
+      <div class="service-card"><div class="service-icon">🩸</div><div class="service-name">Diabetes Center</div><p class="service-desc">Dedicated diabetes management — monitoring, education, and long-term treatment planning with specialist care.</p></div>
+      <div class="service-card"><div class="service-icon">🫁</div><div class="service-name">Gastroenterology</div><p class="service-desc">Specialised diagnosis and treatment for gastrointestinal conditions from acid reflux to complex bowel disorders.</p></div>
+      <div class="service-card"><div class="service-icon">🔬</div><div class="service-name">Radiology & Diagnostics</div><p class="service-desc">Imaging including Ultrasound, X-Ray, CT Scan and MRI — all available within the local community.</p></div>
+      <div class="service-card"><div class="service-icon">🧠</div><div class="service-name">Psychology & Counselling</div><p class="service-desc">Clinical psychology and behavioural science for mental health support and wellbeing assessment.</p></div>
+      <div class="service-card"><div class="service-icon">🚨</div><div class="service-name">Emergency Services</div><p class="service-desc">Round-the-clock emergency care — equipped and staffed for urgent medical situations at any hour.</p></div>
+    </div>
+  </section>
+
+  <section class="doctors-section" id="doctors">
+    <div class="doctors-inner">
+      <p class="section-label">Our Team</p>
+      <h2 class="section-title" style="color:#fff;">Meet Our Specialists</h2>
+      <p class="section-subtitle">Led by highly qualified executive directors committed to accessible, patient-first healthcare in Rawalpindi.</p>
+      <div class="doctors-grid">
+        <div class="doctor-card">
+          <div class="doctor-avatar">G</div>
+          <div><div class="doctor-name">Dr. Prof. Ghulam Murtaza Gondal</div><div class="doctor-specialty">Internal Medicine · Executive Director</div><div class="doctor-quals">B.Sc. · MBBS · FCPS (Medicine) · OJT Gastroenterology Master Trainer · Member, International Diabetes Center USA</div></div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-avatar">S</div>
+          <div><div class="doctor-name">Dr. Sumera Mushtaq Ch.</div><div class="doctor-specialty">Radiology · Executive Director</div><div class="doctor-quals">MBBS · FCPS (Diagnostic Radiology) · Assistant Professor, Foundation University Medical College · Consultant Radiologist, Fauji Foundation Hospital</div></div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-avatar">A</div>
+          <div><div class="doctor-name">Ms. Areej Fatima</div><div class="doctor-specialty">Clinical Psychology</div><div class="doctor-quals">Specialising in behavioural science and clinical counselling. One of the most reviewed practitioners at MMC.</div></div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-avatar">F</div>
+          <div><div class="doctor-name">Ms. Faria Tariq</div><div class="doctor-specialty">Clinical Psychology</div><div class="doctor-quals">Providing psychological assessment and therapeutic support to patients across all age groups.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="whyus-section">
+    <div class="whyus-inner">
+      <div>
+        <p class="section-label">Why MMC</p>
+        <h2 class="section-title">Patient rights are our core value.</h2>
+        <div class="whyus-list">
+          <div class="why-item"><div class="why-num">1</div><div class="why-text"><h4>Affordable & Community-Focused</h4><p>Consultation fees from Rs. 2,000–3,500, committed to the local needs of Bahria Town &amp; surrounding areas.</p></div></div>
+          <div class="why-item"><div class="why-num">2</div><div class="why-text"><h4>Specialist Diabetes & GI Center</h4><p>A dedicated center-of-excellence for diabetics and patients with gastrointestinal conditions — rare in the area.</p></div></div>
+          <div class="why-item"><div class="why-num">3</div><div class="why-text"><h4>Full Diagnostic Imaging On-Site</h4><p>Ultrasound, X-Ray, CT Scan and MRI within the complex — no need to travel across the city.</p></div></div>
+          <div class="why-item"><div class="why-num">4</div><div class="why-text"><h4>Serving Twin Cities Since 2021</h4><p>Inaugurated on 14th August 2021 — now serving the communities of Rawalpindi and Islamabad.</p></div></div>
+        </div>
+      </div>
+      <div class="whyus-visual">
+        <div class="hours-title">🕐 Clinic Hours</div>
+        <div class="hours-row"><span>Monday – Saturday</span><span class="hours-open">9:00 AM – 9:00 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span class="hours-open">10:00 AM – 4:00 PM</span></div>
+        <div class="hours-row"><span>Emergency Dept.</span><span class="hours-open">24 / 7 Always Open</span></div>
+        <div class="emergency-badge">🚨 <span><strong>Emergency?</strong> Call <strong>0330-1531097</strong> — we're here around the clock.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="location-section" id="location">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-title">Location & Contact</h2>
+    <div class="location-grid">
+      <div class="location-info">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><div class="contact-label">Address</div><div class="contact-val">Abu-Bakr Avenue Commercial, Phase 8<br/>Bahria Safari Valley, Rawalpindi</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><div class="contact-label">Phone / WhatsApp</div><div class="contact-val"><a href="tel:03301531097">0330-1531097</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📘</div>
+          <div><div class="contact-label">Facebook</div><div class="contact-val"><a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener">Murtaza Medical Complex Official</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div><div class="contact-label">Website</div><div class="contact-val"><a href="http://murtazamedicalcomplex.com" target="_blank" rel="noopener">murtazamedicalcomplex.com</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div><div class="contact-label">Emergency</div><div class="contact-val">Open 24 hours, 7 days a week</div></div>
+        </div>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.738!2d73.16093!3d33.52247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df948f45670da1%3A0xc36c04df1e3a9d58!2sMurtaza%20Medical%20Complex!5e0!3m2!1sen!2spk!4v1700000000001"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Murtaza Medical Complex on Google Maps">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">Murtaza Medical Complex</div>
+          <p class="footer-brand-desc">A multi-disciplinary health facility committed to affordable, patient-centred care in Bahria Town Phase 8, Rawalpindi.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener" class="fb" title="Facebook">📘</a>
+            <a href="https://wa.me/923301531097" target="_blank" rel="noopener" class="wa" title="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Services</div>
+          <ul>
+            <li><a href="#services">General Medicine</a></li>
+            <li><a href="#services">Diabetes Center</a></li>
+            <li><a href="#services">Gastroenterology</a></li>
+            <li><a href="#services">Radiology</a></li>
+            <li><a href="#services">Psychology</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Hospital</div>
+          <ul>
+            <li><a href="#doctors">Our Doctors</a></li>
+            <li><a href="#appointment">Book Appointment</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <ul>
+            <li><a href="tel:03301531097">0330-1531097</a></li>
+            <li><a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank">Facebook Page</a></li>
+            <li><a href="http://murtazamedicalcomplex.com" target="_blank">Website</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Murtaza Medical Complex. All rights reserved.</span>
+        <span>Bahria Town Phase 8, Rawalpindi, Pakistan</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Min date = today
+    const di = document.getElementById('f_date');
+    if (di) di.setAttribute('min', new Date().toISOString().split('T')[0]);
+
+    // WhatsApp submission
+    document.getElementById('apptForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const v = id => document.getElementById(id).value.trim();
+      const msg =
+`🏥 *New Appointment Request*
+*Murtaza Medical Complex*
+
+👤 *Name:* ${v('f_name')}
+📞 *Phone:* ${v('f_phone')}
+🎂 *Age:* ${v('f_age') || 'Not given'}
+⚧ *Gender:* ${document.getElementById('f_gender').value || 'Not given'}
+🏥 *Department:* ${document.getElementById('f_dept').value}
+📅 *Date:* ${v('f_date')}
+🕐 *Time:* ${document.getElementById('f_time').value || 'Any time'}
+📝 *Concern:* ${v('f_concern') || 'Not given'}`;
+
+      window.open('https://wa.me/923301531097?text=' + encodeURIComponent(msg), '_blank');
+      this.style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
+</body>
+</html>
