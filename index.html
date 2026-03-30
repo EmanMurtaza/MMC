@@ -138,7 +138,8 @@
     .services-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     .service-card { background: var(--blue-xl); border: 1px solid var(--blue-l); border-radius: 10px; padding: 2rem 1.8rem; transition: transform .25s, box-shadow .25s; }
     .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(46,125,50,.12); }
-    .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .service-icon { width: 38px; height: 38px; margin-bottom: 1.2rem; color: var(--blue); }
+    .service-icon svg { width: 38px; height: 38px; }
     .service-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--blue-d); margin-bottom: .5rem; }
     .service-desc { font-size: .85rem; line-height: 1.65; color: var(--body); }
 
@@ -178,7 +179,7 @@
     .location-grid { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
     .location-info { display: flex; flex-direction: column; gap: 1.5rem; }
     .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
-    .contact-icon { width: 44px; height: 44px; background: var(--blue-xl); border: 1px solid var(--blue-l); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-icon { width: 44px; height: 44px; background: var(--blue-xl); border: 1px solid var(--blue-l); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--blue); }
     .contact-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: .2rem; }
     .contact-val { font-size: .95rem; color: var(--ink); font-weight: 500; }
     .contact-val a { color: var(--blue); text-decoration: none; }
@@ -231,10 +232,10 @@
 <body>
 
   <div class="topbar">
-    <span>📍 Abu-Bakr Avenue Commercial, Phase 8 Bahria Town, Rawalpindi</span>
+    <span>Abu-Bakr Avenue Commercial, Phase 8 Bahria Town, Rawalpindi</span>
     <div class="topbar-right">
-      <a href="tel:03301531097">📞 0330-1531097</a>
-      <a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener">📘 Facebook</a>
+      <a href="tel:03301531097">0330-1531097</a>
+      <a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener">Facebook</a>
     </div>
   </div>
 
@@ -280,13 +281,12 @@
 
   <section class="hero" id="appointment">
     <div class="hero-content">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Accepting New Patients</div>
       <h1 class="hero-title">Quality Healthcare<br/><em>Close to Home.</em></h1>
-      <p class="hero-sub">A multi-disciplinary health facility serving Bahria Town Phase 8 and the twin-city community, with a special focus on Diabetes &amp; Gastroenterology care.</p>
+      <p class="hero-sub">A multi-disciplinary clinic serving Bahria Town Phase 8 and the twin-city community since 2021 — with specialist-led care in Diabetes, Gastroenterology, Radiology, and more.</p>
       <div class="hero-info">
-        <div class="hero-info-item"><div class="hero-info-icon">📍</div>Abu-Bakr Avenue Commercial, Phase 8, Bahria Town, Rawalpindi</div>
-        <div class="hero-info-item"><div class="hero-info-icon">🕐</div>Mon–Sat 9am–9pm &nbsp;·&nbsp; Sun 10am–4pm</div>
-        <div class="hero-info-item"><div class="hero-info-icon">📞</div>0330-1531097</div>
+        <div class="hero-info-item"><div class="hero-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>Abu-Bakr Avenue Commercial, Phase 8, Bahria Town, Rawalpindi</div>
+        <div class="hero-info-item"><div class="hero-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>Mon–Sat 9am–9pm &nbsp;·&nbsp; Sun 10am–4pm</div>
+        <div class="hero-info-item"><div class="hero-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.34 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>0330-1531097</div>
       </div>
       <div class="hero-actions">
         <a href="#appointment" class="btn-white">Book an Appointment</a>
@@ -296,7 +296,7 @@
 
     <div class="appt-card">
       <div class="appt-card-header">
-        <div class="appt-card-icon">🗓️</div>
+        <div class="appt-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue)"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
         <div>
           <div class="appt-card-title">Book Appointment</div>
           <div class="appt-card-sub">Sent directly to our team via WhatsApp</div>
@@ -364,7 +364,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.4A12.1 12.1 0 0 0 12 0 12 12 0 0 0 1.7 18L0 24l6.3-1.7A12 12 0 0 0 24 12a12 12 0 0 0-3.5-8.6zM12 22a10 10 0 0 1-5.2-1.4l-.4-.2-3.7 1 1-3.7-.3-.4A10 10 0 1 1 12 22zm5.5-7.5c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7 0a8.3 8.3 0 0 1-4.1-3.6c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4a3.8 3.8 0 0 0-1.2 2.9 6.6 6.6 0 0 0 1.4 3.5 15.2 15.2 0 0 0 5.8 5.1c2.2.9 2.2.6 2.6.6a3.5 3.5 0 0 0 2.3-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.1-.3-.2-.5-.3z"/></svg>
           Send via WhatsApp
         </button>
-        <p class="form-note">🔒 Your details go directly to our clinic's WhatsApp.</p>
+        <p class="form-note">Your details are sent directly to our clinic via WhatsApp.</p>
       </form>
       <div class="success-msg" id="successMsg">
         <div class="check">✅</div>
@@ -386,12 +386,12 @@
     <h2 class="section-title">Comprehensive Medical Services</h2>
     <p class="section-subtitle">Delivering high-quality, affordable healthcare with a focus on the needs of the local Bahria Town community.</p>
     <div class="services-grid">
-      <div class="service-card"><div class="service-icon">🩺</div><div class="service-name">General Medicine</div><p class="service-desc">Expert consultation for general health concerns, routine checkups, and management of common illnesses.</p></div>
-      <div class="service-card"><div class="service-icon">🩸</div><div class="service-name">Diabetes Center</div><p class="service-desc">Dedicated diabetes management — monitoring, education, and long-term treatment planning with specialist care.</p></div>
-      <div class="service-card"><div class="service-icon">🫁</div><div class="service-name">Gastroenterology</div><p class="service-desc">Specialised diagnosis and treatment for gastrointestinal conditions from acid reflux to complex bowel disorders.</p></div>
-      <div class="service-card"><div class="service-icon">🔬</div><div class="service-name">Radiology & Diagnostics</div><p class="service-desc">Imaging including Ultrasound, X-Ray, CT Scan and MRI — all available within the local community.</p></div>
-      <div class="service-card"><div class="service-icon">🧠</div><div class="service-name">Psychology & Counselling</div><p class="service-desc">Clinical psychology and behavioural science for mental health support and wellbeing assessment.</p></div>
-      <div class="service-card"><div class="service-icon">💊</div><div class="service-name">Pharmacy & Follow-up</div><p class="service-desc">On-site pharmacy support and structured follow-up care to ensure continuity of treatment for all patients.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div><div class="service-name">General Medicine</div><p class="service-desc">Expert consultation for general health concerns, routine checkups, and management of common illnesses.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><div class="service-name">Diabetes Center</div><p class="service-desc">Dedicated diabetes management — monitoring, education, and long-term treatment planning with specialist care.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="service-name">Gastroenterology</div><p class="service-desc">Specialised diagnosis and treatment for gastrointestinal conditions from acid reflux to complex bowel disorders.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="7 8 10 12 13 9 16 13"/></svg></div><div class="service-name">Radiology & Diagnostics</div><p class="service-desc">Imaging including Ultrasound, X-Ray, CT Scan and MRI — all available within the local community.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"/></svg></div><div class="service-name">Psychology & Counselling</div><p class="service-desc">Clinical psychology and behavioural science for mental health support and wellbeing assessment.</p></div>
+      <div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg></div><div class="service-name">Pharmacy & Follow-up</div><p class="service-desc">On-site pharmacy support and structured follow-up care to ensure continuity of treatment for all patients.</p></div>
     </div>
   </section>
 
@@ -425,7 +425,7 @@
     <div class="whyus-inner">
       <div>
         <p class="section-label">Why MMC</p>
-        <h2 class="section-title">Patient rights are our core value.</h2>
+        <h2 class="section-title">Why families in Bahria Town choose MMC.</h2>
         <div class="whyus-list">
           <div class="why-item"><div class="why-num">1</div><div class="why-text"><h4>Affordable & Community-Focused</h4><p>Consultation fees from Rs. 2,000–3,500, committed to the local needs of Bahria Town &amp; surrounding areas.</p></div></div>
           <div class="why-item"><div class="why-num">2</div><div class="why-text"><h4>Specialist Diabetes & GI Center</h4><p>A dedicated center-of-excellence for diabetics and patients with gastrointestinal conditions — rare in the area.</p></div></div>
@@ -434,7 +434,7 @@
         </div>
       </div>
       <div class="whyus-visual">
-        <div class="hours-title">🕐 Clinic Hours</div>
+        <div class="hours-title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Clinic Hours</div>
         <div class="hours-row"><span>Monday – Saturday</span><span class="hours-open">9:00 AM – 9:00 PM</span></div>
         <div class="hours-row"><span>Sunday</span><span class="hours-open">10:00 AM – 4:00 PM</span></div>
       </div>
@@ -447,23 +447,23 @@
     <div class="location-grid">
       <div class="location-info">
         <div class="contact-item">
-          <div class="contact-icon">📍</div>
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div><div class="contact-label">Address</div><div class="contact-val">Abu-Bakr Avenue Commercial, Phase 8<br/>Bahria Safari Valley, Rawalpindi</div></div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">📞</div>
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.34 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
           <div><div class="contact-label">Phone / WhatsApp</div><div class="contact-val"><a href="tel:03301531097">0330-1531097</a></div></div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">📘</div>
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
           <div><div class="contact-label">Facebook</div><div class="contact-val"><a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener">Murtaza Medical Complex Official</a></div></div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">🌐</div>
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
           <div><div class="contact-label">Website</div><div class="contact-val"><a href="http://murtazamedicalcomplex.com" target="_blank" rel="noopener">murtazamedicalcomplex.com</a></div></div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">🕐</div>
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <div><div class="contact-label">Clinic Hours</div><div class="contact-val">Mon–Sat: 9am–9pm &nbsp;|&nbsp; Sun: 10am–4pm</div></div>
         </div>
       </div>
@@ -487,8 +487,8 @@
           <div class="footer-brand-name">Murtaza Medical Complex</div>
           <p class="footer-brand-desc">A multi-disciplinary health facility committed to affordable, patient-centred care in Bahria Town Phase 8, Rawalpindi.</p>
           <div class="footer-social">
-            <a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener" class="fb" title="Facebook">📘</a>
-            <a href="https://wa.me/923301531097" target="_blank" rel="noopener" class="wa" title="WhatsApp">💬</a>
+            <a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener" class="fb" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://wa.me/923301531097" target="_blank" rel="noopener" class="wa" title="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
           </div>
         </div>
         <div class="footer-col">
