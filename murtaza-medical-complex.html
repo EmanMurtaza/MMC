@@ -11,10 +11,10 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue:    #1a5fa0;
-      --blue-d:  #113d6b;
-      --blue-l:  #cfe0f5;
-      --blue-xl: #edf4fc;
+      --blue:    #2e7d32;
+      --blue-d:  #1b5e20;
+      --blue-l:  #a5d6a7;
+      --blue-xl: #e8f5e9;
       --white:   #ffffff;
       --ink:     #0f1c2e;
       --body:    #384655;
@@ -47,9 +47,9 @@
     }
     .nav-brand { display: flex; align-items: center; gap: .9rem; text-decoration: none; }
     .nav-logo-icon {
-      width: 44px; height: 44px; background: var(--blue); border-radius: 50%;
+      width: 44px; height: 44px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      color: #fff; font-family: var(--serif); font-size: 1.3rem; font-weight: 700; flex-shrink: 0;
+      flex-shrink: 0; overflow: hidden;
     }
     .nav-brand-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: var(--blue-d); display: block; }
     .nav-brand-sub  { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
@@ -60,7 +60,7 @@
     .nav-appt:hover { background: var(--blue-d); }
 
     .hero {
-      background: linear-gradient(135deg, var(--blue-d) 0%, var(--blue) 60%, #2a80c8 100%);
+      background: linear-gradient(135deg, var(--blue-d) 0%, var(--blue) 60%, #43a047 100%);
       position: relative; overflow: hidden; padding: 5.5rem 3rem 4rem;
       display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
     }
@@ -86,7 +86,7 @@
       color: rgba(255,255,255,.9); margin-bottom: 1.5rem;
       animation: fadeUp .8s .1s ease both;
     }
-    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #90d4ff; animation: pulse 2s infinite; }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #81c784; animation: pulse 2s infinite; }
     .hero-title { font-family: var(--serif); font-size: clamp(2.4rem, 4.5vw, 3.8rem); font-weight: 700; line-height: 1.1; color: #fff; animation: fadeUp .8s .2s ease both; }
     .hero-title em { font-style: italic; color: rgba(255,255,255,.75); }
     .hero-sub { margin-top: 1.2rem; font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,.75); max-width: 44ch; animation: fadeUp .8s .35s ease both; }
@@ -118,7 +118,7 @@
       font-family: var(--sans); font-size: .88rem; color: var(--ink); background: #fff;
       outline: none; transition: border-color .2s, box-shadow .2s; width: 100%;
     }
-    .form-control:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,95,160,.1); }
+    .form-control:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(46,125,50,.1); }
     .form-control::placeholder { color: #b0bfcf; }
     select.form-control { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237a8fa0' d='M1 1l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .9rem center; padding-right: 2.2rem; }
     textarea.form-control { resize: vertical; }
@@ -137,14 +137,14 @@
 
     .services-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     .service-card { background: var(--blue-xl); border: 1px solid var(--blue-l); border-radius: 10px; padding: 2rem 1.8rem; transition: transform .25s, box-shadow .25s; }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,95,160,.12); }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(46,125,50,.12); }
     .service-icon { font-size: 2rem; margin-bottom: 1rem; }
     .service-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--blue-d); margin-bottom: .5rem; }
     .service-desc { font-size: .85rem; line-height: 1.65; color: var(--body); }
 
     .doctors-section { background: var(--ink); padding: 5.5rem 3rem; }
     .doctors-inner { max-width: 1200px; margin: 0 auto; }
-    .doctors-section .section-label { color: #90d4ff; }
+    .doctors-section .section-label { color: #81c784; }
     .doctors-section .section-title { color: #fff; }
     .doctors-section .section-subtitle { color: rgba(255,255,255,.55); }
     .doctors-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
@@ -152,7 +152,7 @@
     .doctor-card:hover { background: rgba(255,255,255,.08); }
     .doctor-avatar { width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--blue-d)); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: #fff; flex-shrink: 0; }
     .doctor-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: .25rem; }
-    .doctor-specialty { font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: #90d4ff; margin-bottom: .6rem; }
+    .doctor-specialty { font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: #81c784; margin-bottom: .6rem; }
     .doctor-quals { font-size: .82rem; line-height: 1.6; color: rgba(255,255,255,.55); }
 
     .stats-bar { background: var(--blue); padding: 3rem; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 2rem; }
@@ -170,7 +170,7 @@
     .hours-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: .5rem; }
     .hours-row { display: flex; justify-content: space-between; padding: .7rem 0; border-bottom: 1px solid rgba(255,255,255,.1); font-size: .88rem; color: rgba(255,255,255,.8); }
     .hours-row:last-child { border-bottom: none; }
-    .hours-open { color: #90d4ff; font-weight: 500; }
+    .hours-open { color: #81c784; font-weight: 500; }
     .emergency-badge { margin-top: 1.5rem; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); padding: 1rem 1.2rem; font-size: .84rem; color: rgba(255,255,255,.8); display: flex; align-items: center; gap: .6rem; }
     .emergency-badge strong { color: #fff; }
 
@@ -233,7 +233,6 @@
   <div class="topbar">
     <span>📍 Abu-Bakr Avenue Commercial, Phase 8 Bahria Town, Rawalpindi</span>
     <div class="topbar-right">
-      <span>🕐 Emergency: 24/7</span>
       <a href="tel:03301531097">📞 0330-1531097</a>
       <a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener">📘 Facebook</a>
     </div>
@@ -241,7 +240,31 @@
 
   <nav>
     <a href="#" class="nav-brand">
-      <div class="nav-logo-icon">M</div>
+      <div class="nav-logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44">
+          <circle cx="22" cy="22" r="21" fill="white" stroke="#2e7d32" stroke-width="2.5"/>
+          <circle cx="22" cy="22" r="17.5" fill="none" stroke="#2e7d32" stroke-width="1"/>
+          <!-- Staff -->
+          <rect x="21.1" y="10" width="1.8" height="24" rx="0.9" fill="#2e7d32"/>
+          <!-- Wings -->
+          <path d="M22 12 C17 9 11 11 10 13 C14 13 18 14 22 16 C26 14 30 13 34 13 C33 11 27 9 22 12Z" fill="#2e7d32"/>
+          <!-- Left snake -->
+          <path d="M22 17 C18 20 18 24 22 27 C26 30 26 33 22 34" fill="none" stroke="#2e7d32" stroke-width="1.6" stroke-linecap="round"/>
+          <!-- Right snake -->
+          <path d="M22 17 C26 20 26 24 22 27 C18 30 18 33 22 34" fill="none" stroke="#2e7d32" stroke-width="1.6" stroke-linecap="round"/>
+          <!-- Top arc text -->
+          <defs>
+            <path id="ta" d="M 5 22 A 17 17 0 0 1 39 22"/>
+            <path id="ba" d="M 7 24 A 15 15 0 0 0 37 24"/>
+          </defs>
+          <text font-size="4.2" fill="#2e7d32" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="0.8">
+            <textPath href="#ta" startOffset="4%">MURTAZA MEDICAL COMPLEX</textPath>
+          </text>
+          <text font-size="3.8" fill="#2e7d32" font-family="Arial,sans-serif" letter-spacing="0.6">
+            <textPath href="#ba" startOffset="18%">MEDICAL SERVICES</textPath>
+          </text>
+        </svg>
+      </div>
       <div>
         <span class="nav-brand-name">Murtaza Medical Complex</span>
         <span class="nav-brand-sub">Bahria Town Phase 8 · Rawalpindi</span>
@@ -262,7 +285,7 @@
       <p class="hero-sub">A multi-disciplinary health facility serving Bahria Town Phase 8 and the twin-city community, with a special focus on Diabetes &amp; Gastroenterology care.</p>
       <div class="hero-info">
         <div class="hero-info-item"><div class="hero-info-icon">📍</div>Abu-Bakr Avenue Commercial, Phase 8, Bahria Town, Rawalpindi</div>
-        <div class="hero-info-item"><div class="hero-info-icon">🕐</div>Emergency services available 24/7</div>
+        <div class="hero-info-item"><div class="hero-info-icon">🕐</div>Mon–Sat 9am–9pm &nbsp;·&nbsp; Sun 10am–4pm</div>
         <div class="hero-info-item"><div class="hero-info-icon">📞</div>0330-1531097</div>
       </div>
       <div class="hero-actions">
@@ -352,7 +375,7 @@
   </section>
 
   <div class="stats-bar">
-    <div><div class="stat-val">24/7</div><div class="stat-label">Emergency Care</div></div>
+    <div><div class="stat-val">6+</div><div class="stat-label">Specialties</div></div>
     <div><div class="stat-val">2021</div><div class="stat-label">Established</div></div>
     <div><div class="stat-val">Rs.2500</div><div class="stat-label">Consultation Fee</div></div>
     <div><div class="stat-val">4+</div><div class="stat-label">Specialist Doctors</div></div>
@@ -368,7 +391,7 @@
       <div class="service-card"><div class="service-icon">🫁</div><div class="service-name">Gastroenterology</div><p class="service-desc">Specialised diagnosis and treatment for gastrointestinal conditions from acid reflux to complex bowel disorders.</p></div>
       <div class="service-card"><div class="service-icon">🔬</div><div class="service-name">Radiology & Diagnostics</div><p class="service-desc">Imaging including Ultrasound, X-Ray, CT Scan and MRI — all available within the local community.</p></div>
       <div class="service-card"><div class="service-icon">🧠</div><div class="service-name">Psychology & Counselling</div><p class="service-desc">Clinical psychology and behavioural science for mental health support and wellbeing assessment.</p></div>
-      <div class="service-card"><div class="service-icon">🚨</div><div class="service-name">Emergency Services</div><p class="service-desc">Round-the-clock emergency care — equipped and staffed for urgent medical situations at any hour.</p></div>
+      <div class="service-card"><div class="service-icon">💊</div><div class="service-name">Pharmacy & Follow-up</div><p class="service-desc">On-site pharmacy support and structured follow-up care to ensure continuity of treatment for all patients.</p></div>
     </div>
   </section>
 
@@ -414,8 +437,6 @@
         <div class="hours-title">🕐 Clinic Hours</div>
         <div class="hours-row"><span>Monday – Saturday</span><span class="hours-open">9:00 AM – 9:00 PM</span></div>
         <div class="hours-row"><span>Sunday</span><span class="hours-open">10:00 AM – 4:00 PM</span></div>
-        <div class="hours-row"><span>Emergency Dept.</span><span class="hours-open">24 / 7 Always Open</span></div>
-        <div class="emergency-badge">🚨 <span><strong>Emergency?</strong> Call <strong>0330-1531097</strong> — we're here around the clock.</span></div>
       </div>
     </div>
   </div>
@@ -443,7 +464,7 @@
         </div>
         <div class="contact-item">
           <div class="contact-icon">🕐</div>
-          <div><div class="contact-label">Emergency</div><div class="contact-val">Open 24 hours, 7 days a week</div></div>
+          <div><div class="contact-label">Clinic Hours</div><div class="contact-val">Mon–Sat: 9am–9pm &nbsp;|&nbsp; Sun: 10am–4pm</div></div>
         </div>
       </div>
 
