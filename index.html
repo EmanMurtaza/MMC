@@ -1085,7 +1085,19 @@
 
     function waMessage(appt) {
       const dept = deptById(appt.dept);
-      return `🏥 *Appointment ${appt.ref ? 'Reservation ' + appt.ref : 'Request'}*\n*Murtaza Medical Complex*\n\n👤 *Name:* ${appt.name}\n📞 *Phone:* ${appt.phone}\n🏥 *Department:* ${dept.name}\n👨‍⚕️ *Consultant:* ${dept.doctor}\n📅 *Date:* ${appt.date}\n🕐 *Time:* ${fmt12(appt.time)}\n📝 *Concern:* ${appt.concern || 'Not given'}`;
+      return `🏥 *New Appointment Booking*\n*Murtaza Medical Complex*\n` +
+        `━━━━━━━━━━━━━━━━━━━━\n` +
+        `🔖 *Ref:* ${appt.ref || 'Walk-in'}\n` +
+        `👤 *Patient:* ${appt.name}\n` +
+        `📞 *Phone:* ${appt.phone}\n` +
+        `🏥 *Department:* ${dept.name}\n` +
+        `👨‍⚕️ *Consultant:* ${dept.doctor}\n` +
+        `📍 *Room:* ${dept.room}\n` +
+        `📅 *Date:* ${appt.date}\n` +
+        `🕐 *Time:* ${fmt12(appt.time)}\n` +
+        `📝 *Concern:* ${appt.concern || 'Not specified'}\n` +
+        `━━━━━━━━━━━━━━━━━━━━\n` +
+        `_Booked via murtazamedicalcomplex.netlify.app_`;
     }
 
     $('#bookForm').addEventListener('submit', async function (e) {
@@ -1124,12 +1136,14 @@
 
       if (!appt) {
         appt = { ...payload, ref: null };
-        window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMessage(appt))}`, '_blank');
         $('#pStatus').textContent = '📲 Request sent via WhatsApp — our team will confirm shortly.';
       } else {
-        $('#pStatus').textContent = '⏳ Pending confirmation — our team will contact you shortly.';
+        $('#pStatus').textContent = '✅ Booked — a WhatsApp notification has been sent to MMC.';
         loadBoard(); loadMiniBoard();
       }
+
+      // Always auto-notify MMC via WhatsApp on every booking
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMessage({ ...payload, ref: appt.ref }))}`, '_blank');
 
       // boarding pass
       const dept = deptById(state.dept);
