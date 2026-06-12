@@ -1,0 +1,12 @@
+{
+  "name": "mmc-website",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Murtaza Medical Complex — website, live appointment board and admin panel",
+  "scripts": {
+    "dev": "node dev-server.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
