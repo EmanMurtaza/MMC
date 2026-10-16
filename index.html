@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Murtaza Medical Complex — Book Appointments Online | Bahria Town Phase 8, Rawalpindi</title>
-  <meta name="description" content="Murtaza Medical Complex — specialist-led healthcare in Bahria Town Phase 8, Rawalpindi. Live appointment board: see open slots and book online in seconds. Diabetes, Gastroenterology, Radiology, Psychology & General Medicine."/>
+  <meta name="description" content="Murtaza Medical Complex — specialist-led healthcare in Bahria Town Phase 8, Rawalpindi. Request an appointment online in under a minute. Diabetes, Gastroenterology, Radiology, Psychology & General Medicine."/>
   <meta property="og:title" content="Murtaza Medical Complex — Book Appointments Online"/>
-  <meta property="og:description" content="See live open slots on our appointment board and book in seconds. Bahria Town Phase 8, Rawalpindi."/>
+  <meta property="og:description" content="Request an appointment online in under a minute. Bahria Town Phase 8, Rawalpindi."/>
   <meta property="og:type" content="website"/>
   <meta name="theme-color" content="#1b5e20"/>
   <link rel="icon" href="assets/logo.png" type="image/png"/>
@@ -14,7 +14,7 @@
   <meta property="og:image" content="assets/logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -137,34 +137,6 @@
     .btn-outline-white { border: 1.5px solid rgba(255,255,255,.4); color: #fff; padding: .85rem 1.8rem; border-radius: var(--radius); font-size: .9rem; text-decoration: none; transition: background .2s, border-color .2s; }
     .btn-outline-white:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.7); }
 
-    /* hero mini board */
-    .hero-board { position: relative; z-index: 1; animation: fadeIn 1s .4s var(--ease-out) both; }
-    .mini-board {
-      background: var(--board-bg); border: 1px solid #233428; border-radius: 14px;
-      box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 0 1px rgba(110,231,160,.06) inset;
-      padding: 1.4rem 1.5rem 1.2rem; overflow: hidden; position: relative;
-    }
-    .mini-board::after { content:''; position:absolute; inset:0; pointer-events:none; background: repeating-linear-gradient(0deg, rgba(255,255,255,.015) 0 1px, transparent 1px 3px); }
-    .mini-board-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: .8rem; border-bottom: 1px dashed var(--board-line); }
-    .mini-board-title { font-family: var(--mono); font-size: .68rem; letter-spacing: .22em; color: var(--led-amber); }
-    .mini-board-clock { font-family: var(--mono); font-size: .72rem; color: var(--led-green); }
-    .mini-rows { display: flex; flex-direction: column; }
-    .mini-row {
-      display: grid; grid-template-columns: 72px 1fr auto; gap: .8rem; align-items: center;
-      padding: .68rem .4rem; border-bottom: 1px solid var(--board-line);
-      cursor: pointer; transition: background .2s, transform .2s var(--ease-out); border-radius: 4px;
-    }
-    .mini-row:last-child { border-bottom: none; }
-    .mini-row:hover { background: rgba(110,231,160,.06); transform: translateX(4px); }
-    .mini-row .t { font-family: var(--mono); font-weight: 700; color: #e8f5e9; font-size: .95rem; }
-    .mini-row .d { font-family: var(--mono); font-size: .68rem; color: var(--led-dim); letter-spacing: .08em; text-transform: uppercase; }
-    .mini-row .s { font-family: var(--mono); font-size: .66rem; letter-spacing: .14em; color: var(--led-green); }
-    .mini-row .s::before { content: '● '; }
-    .mini-board-foot { margin-top: 1rem; text-align: center; }
-    .mini-board-foot a { font-family: var(--mono); font-size: .68rem; letter-spacing: .18em; color: var(--led-amber); text-decoration: none; }
-    .mini-board-foot a:hover { text-decoration: underline; }
-    .mini-empty { font-family: var(--mono); font-size: .72rem; color: var(--led-dim); text-align: center; padding: 1.4rem 0; letter-spacing: .1em; }
-
     /* ---------- stats ---------- */
     .stats-bar { background: var(--green); padding: 3.2rem 3rem; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 2rem; }
     .stat-val { font-family: var(--serif); font-size: 2.9rem; font-weight: 700; color: #fff; line-height: 1; font-variant-numeric: tabular-nums; }
@@ -175,96 +147,6 @@
     .section-label { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--green); font-weight: 600; margin-bottom: .7rem; }
     .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.7rem); font-weight: 700; color: var(--ink); line-height: 1.2; }
     .section-subtitle { margin-top: .8rem; font-size: .95rem; line-height: 1.7; color: var(--muted); max-width: 58ch; }
-
-    /* ---------- departure board ---------- */
-    .board-section { background: #f3f7f3; padding: 5.5rem 3rem; }
-    .board-wrap { max-width: 1200px; margin: 0 auto; }
-    .board-controls { margin-top: 2.4rem; display: flex; flex-direction: column; gap: 1rem; }
-    .chip-row { display: flex; gap: .6rem; flex-wrap: wrap; }
-    .chip {
-      font-family: var(--mono); font-size: .72rem; letter-spacing: .06em;
-      background: #fff; color: var(--body); border: 1.5px solid var(--border);
-      padding: .55rem 1rem; border-radius: 100px; cursor: pointer;
-      transition: all .25s var(--ease-spring); user-select: none;
-    }
-    .chip:hover { border-color: var(--green); color: var(--green-d); transform: translateY(-2px); }
-    .chip.active { background: var(--green-d); border-color: var(--green-d); color: #fff; box-shadow: 0 6px 18px rgba(27,94,32,.3); }
-    .chip .chip-sub { display: block; font-size: .6rem; opacity: .65; letter-spacing: .12em; }
-
-    .board {
-      margin-top: 1.6rem; background: var(--board-bg);
-      border: 1px solid #233428; border-radius: 16px; overflow: hidden;
-      box-shadow: 0 40px 90px rgba(11,17,13,.35), 0 0 0 1px rgba(110,231,160,.05) inset;
-      position: relative;
-    }
-    .board::after { content:''; position:absolute; inset:0; pointer-events:none; z-index: 5; background: repeating-linear-gradient(0deg, rgba(255,255,255,.012) 0 1px, transparent 1px 3px); }
-    .board-top {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.1rem 1.6rem; background: #0e1510; border-bottom: 1px solid var(--board-line);
-    }
-    .board-logo { font-family: var(--mono); font-size: .78rem; font-weight: 700; letter-spacing: .26em; color: var(--led-amber); }
-    .board-logo .plus { color: var(--led-green); }
-    .board-clock { font-family: var(--mono); font-size: .85rem; color: var(--led-green); letter-spacing: .12em; }
-    .board-clock small { color: var(--led-dim); font-size: .65rem; margin-left: .4rem; }
-    .board-cols, .board-row {
-      display: grid; grid-template-columns: 90px 1.5fr 1.3fr 110px 170px;
-      gap: 1rem; align-items: center; padding: .72rem 1.6rem;
-    }
-    .board-cols {
-      font-family: var(--mono); font-size: .62rem; letter-spacing: .24em; color: var(--led-dim);
-      border-bottom: 1px solid var(--board-line); background: #0e1510;
-    }
-    .board-rows { max-height: 560px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #2c4233 var(--board-bg); }
-    .board-rows::-webkit-scrollbar { width: 8px; }
-    .board-rows::-webkit-scrollbar-thumb { background: #2c4233; border-radius: 4px; }
-    .board-row {
-      border-bottom: 1px solid var(--board-line); position: relative;
-      opacity: 0; transform: translateY(8px);
-      animation: rowIn .45s var(--ease-out) forwards; animation-delay: var(--rd, 0ms);
-    }
-    .board-row .cell-dept, .board-row .cell-doc, .board-row .cell-room { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; color: #b7ccba; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .board-row .cell-room { color: var(--led-dim); }
-    .board-row.is-open { cursor: pointer; }
-    .board-row.is-open:hover { background: rgba(110,231,160,.07); }
-    .board-row.is-open:hover::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--led-green); box-shadow: 0 0 12px var(--led-green); }
-    .board-row.is-open:active { background: rgba(110,231,160,.12); }
-    .board-row.is-dim .fc, .board-row.is-dim .cell-dept, .board-row.is-dim .cell-doc { color: var(--led-dim) !important; }
-    .board-foot {
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .6rem;
-      padding: .9rem 1.6rem; background: #0e1510; border-top: 1px solid var(--board-line);
-      font-family: var(--mono); font-size: .64rem; letter-spacing: .18em; color: var(--led-dim);
-    }
-    .board-foot .legend { display: flex; gap: 1.4rem; flex-wrap: wrap; }
-    .lg::before { content: '● '; }
-    .lg-open::before { color: var(--led-green); }
-    .lg-full::before { color: var(--led-amber); }
-    .lg-closed::before { color: var(--led-red); }
-    .live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--led-green); box-shadow: 0 0 8px var(--led-green); animation: pulse 2s infinite; margin-right: .45rem; vertical-align: middle; }
-
-    /* split-flap characters */
-    .flap { display: inline-flex; gap: 2px; }
-    .fc {
-      display: inline-flex; align-items: center; justify-content: center;
-      font-family: var(--mono); font-weight: 700; font-size: .82rem;
-      width: 1.05em; height: 1.5em; color: #eaf6ec;
-      background: linear-gradient(180deg, #1d2a21 0%, #16211a 48%, #101a14 52%, #15201a 100%);
-      border-radius: 3px; position: relative;
-      box-shadow: 0 1px 0 rgba(0,0,0,.5);
-    }
-    .fc::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(0,0,0,.55); }
-    .fc.flick { animation: flick .09s linear; }
-    .cell-status .fc { font-size: .66rem; width: 1.02em; height: 1.55em; }
-    .st-open .fc { color: var(--led-green); text-shadow: 0 0 8px rgba(110,231,160,.45); }
-    .st-full .fc { color: var(--led-amber); text-shadow: 0 0 8px rgba(255,181,71,.4); }
-    .st-blocked .fc { color: var(--led-red); text-shadow: 0 0 8px rgba(255,122,107,.4); }
-    .st-past .fc { color: var(--led-dim); }
-
-    /* board skeleton */
-    .sk-row { display: grid; grid-template-columns: 90px 1.5fr 1.3fr 110px 170px; gap: 1rem; padding: .85rem 1.6rem; border-bottom: 1px solid var(--board-line); }
-    .sk { height: 16px; border-radius: 4px; background: linear-gradient(90deg, #15201a 25%, #1e2d22 50%, #15201a 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; }
-
-    .board-note { margin-top: 1rem; font-size: .8rem; color: var(--muted); text-align: center; }
-    .board-note.offline { color: var(--gold); }
 
     /* ---------- services ---------- */
     .services-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -492,6 +374,195 @@
       .hero-actions { flex-direction: column; }
       .pass-body { grid-template-columns: 1fr 1fr; }
     }
+
+    /* =====================================================
+       VISUAL REFRESH — palette, type, cards, spacing
+       ===================================================== */
+    :root {
+      --green:    #0f766e;
+      --green-d:  #0a3d38;
+      --green-l:  #c9e8e2;
+      --green-xl: #eef7f4;
+      --ink:      #10211f;
+      --body:     #3f514e;
+      --muted:    #73857f;
+      --border:   #e3ebe8;
+      --gold:     #e0a43c;
+      --cream:    #faf7f1;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans:  'Plus Jakarta Sans', system-ui, sans-serif;
+      --radius: 12px;
+      --shadow-sm: 0 1px 2px rgba(16,33,31,.05), 0 4px 14px rgba(16,33,31,.05);
+      --shadow-md: 0 2px 4px rgba(16,33,31,.04), 0 18px 44px rgba(16,33,31,.10);
+    }
+    body { background: var(--cream); -webkit-font-smoothing: antialiased; line-height: 1.55; }
+    .section-title, .hero-title, .stat-val, .service-name, .doctor-name, .footer-brand-name, .hours-title, .nav-brand-name { font-variation-settings: 'opsz' 96; letter-spacing: -.02em; }
+
+    /* top bar + nav */
+    .topbar { background: var(--green-d); font-size: .75rem; padding: .5rem max(1.5rem, calc((100vw - 1200px)/2)); }
+    nav { padding: .8rem max(1.5rem, calc((100vw - 1200px)/2)); background: rgba(250,247,241,.85); box-shadow: 0 1px 0 rgba(16,33,31,.07); }
+    .nav-brand-name { font-size: 1.12rem; }
+    .nav-links { gap: 2.2rem; }
+    .nav-links a { font-weight: 500; font-size: .88rem; }
+    .nav-appt { border-radius: 999px; padding: .7rem 1.5rem; background: var(--green-d); font-weight: 600; }
+    .nav-appt:hover { background: var(--green); box-shadow: 0 10px 24px rgba(15,118,110,.35); }
+
+    /* hero */
+    .hero {
+      background:
+        radial-gradient(ellipse 60% 80% at 85% 20%, rgba(224,164,60,.22) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 90% at 10% 100%, rgba(45,212,191,.18) 0%, transparent 55%),
+        linear-gradient(160deg, #06302c 0%, #0a3d38 55%, #0f5a52 100%);
+      padding: 6.5rem max(1.5rem, calc((100vw - 1200px)/2)) 6rem; gap: 5rem;
+    }
+    .hero::after { opacity: .35; background-size: auto; mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%); }
+    .hero-badge { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: #d9f3ee; font-weight: 500; backdrop-filter: blur(6px); }
+    .hero-badge-dot { background: #5eead4; box-shadow: 0 0 0 4px rgba(94,234,212,.2); }
+    .hero-title { font-size: clamp(2.8rem, 5.6vw, 4.6rem); font-weight: 600; line-height: 1.02; }
+    .hero-title em { color: var(--gold); font-weight: 400; }
+    .hero-sub { font-size: 1.06rem; color: rgba(255,255,255,.76); max-width: 50ch; }
+    .hero-info { margin-top: 2.2rem; padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,.12); }
+    .hero-info-icon { background: rgba(224,164,60,.16); color: var(--gold); }
+    .hero-actions { margin-top: 2.4rem; }
+    .btn-white, .btn-outline-white { border-radius: 999px; padding: .95rem 2rem; font-weight: 600; }
+    .btn-white { background: var(--gold); color: #2a1c02; box-shadow: 0 10px 30px rgba(224,164,60,.35); }
+    .btn-white:hover { box-shadow: 0 16px 36px rgba(224,164,60,.5); }
+    .btn-outline-white { border-color: rgba(255,255,255,.3); }
+
+    /* stats */
+    .stats-bar { background: var(--cream); padding: 0 max(1.5rem, calc((100vw - 1200px)/2)); gap: 0; margin-top: -3rem; position: relative; z-index: 2; }
+    .stats-bar > * { background: #fff; padding: 2rem 1rem; border-right: 1px solid var(--border); box-shadow: var(--shadow-md); }
+    .stats-bar > *:first-child { border-radius: 20px 0 0 20px; }
+    .stats-bar > *:last-child { border-radius: 0 20px 20px 0; border-right: none; }
+    .stat-val { color: var(--green-d); font-size: 2.7rem; }
+    .stat-label { color: var(--muted); font-weight: 500; }
+
+    /* sections */
+    .section, .location-section { padding: 6.5rem 1.5rem; }
+    .section-label { display: inline-block; background: var(--green-xl); color: var(--green); padding: .35rem .85rem; border-radius: 999px; letter-spacing: .12em; margin-bottom: 1rem; }
+    .section-title { font-weight: 600; font-size: clamp(2rem, 4vw, 3.1rem); }
+    .section-subtitle { font-size: 1.02rem; }
+
+    /* services */
+    .services-grid { gap: 1.4rem; }
+    .service-card { background: #fff; border: 1px solid var(--border); border-radius: 22px; padding: 2.2rem 2rem; box-shadow: var(--shadow-sm); }
+    .service-card::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 4px; background: linear-gradient(90deg, var(--green), var(--gold)); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease-out); }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--green-l); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { width: 56px; height: 56px; border-radius: 16px; background: var(--green-xl); display: flex; align-items: center; justify-content: center; }
+    .service-icon svg { width: 28px; height: 28px; }
+    .service-name { font-size: 1.3rem; font-weight: 600; color: var(--ink); }
+    .service-book { color: var(--green); }
+
+    /* doctors */
+    .doctors-section { background: linear-gradient(180deg, #0a3d38, #06302c); padding: 6.5rem 1.5rem; }
+    .doctors-section .section-label { background: rgba(255,255,255,.08); color: #99f6e4; }
+    .doctor-card { border-radius: 22px; padding: 2rem; background: rgba(255,255,255,.05); }
+    .doctor-avatar { width: 68px; height: 68px; background: linear-gradient(135deg, var(--gold), #b7791f); color: #2a1c02; box-shadow: 0 0 0 5px rgba(224,164,60,.18); }
+    .doctor-specialty { color: var(--gold); }
+
+    .doc-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
+    .doc-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 22px; overflow: hidden; transition: transform .35s var(--ease-spring), border-color .3s, background .3s; }
+    .doc-card:hover { transform: translateY(-6px); border-color: rgba(224,164,60,.5); background: rgba(255,255,255,.09); }
+    .doc-photo { aspect-ratio: 4/5; overflow: hidden; background: #0f5a52; }
+    .doc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; display: block; transition: transform .6s var(--ease-out); }
+    .doc-card:hover .doc-photo img { transform: scale(1.05); }
+    .doc-initial { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f766e, #0a3d38); }
+    .doc-initial span { font-family: var(--serif); font-size: 4.5rem; font-weight: 600; color: var(--gold); }
+    .doc-info { padding: 1.2rem 1.3rem 1.5rem; }
+    .doc-name { font-family: var(--serif); font-size: 1.12rem; font-weight: 600; color: #fff; line-height: 1.25; }
+    .doc-spec { margin-top: .35rem; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+    .doc-quals { margin-top: .6rem; font-size: .8rem; line-height: 1.55; color: rgba(255,255,255,.58); }
+    @media (max-width: 1000px) { .doc-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 720px) { .doc-grid { grid-template-columns: repeat(2, 1fr); gap: .9rem; } .doc-info { padding: 1rem; } .doc-name { font-size: 1rem; } }
+
+    /* why us */
+    .whyus-section { background: var(--green-xl); padding: 6.5rem 1.5rem; }
+    .why-num { background: var(--green-d); }
+    .whyus-visual { background: linear-gradient(160deg, #0a3d38, #0f5a52); border-radius: 26px; box-shadow: var(--shadow-md); }
+    .hours-open { color: var(--gold); }
+
+    /* video, location, footer */
+    .director-video-section { background: var(--cream); padding: 6.5rem 1.5rem; }
+    .director-video-section .section-title { color: var(--ink) !important; }
+    .director-video-section [class*="label"] { background: var(--green-xl); color: var(--green) !important; }
+    .director-video-section p { color: var(--body) !important; }
+    .director-video-wrap, .director-video-wrap video { border-radius: 26px; }
+    .contact-icon { background: var(--green-xl); border-color: var(--green-l); }
+    .map-wrap { border-radius: 24px; box-shadow: var(--shadow-md); border: none; }
+    footer { background: #06302c; }
+    .footer-social a { border-radius: 50%; }
+
+    /* hero info card */
+    .hero-card { position: relative; z-index: 1; background: rgba(255,255,255,.96); color: var(--ink); border-radius: 28px; padding: 2rem; box-shadow: 0 40px 90px rgba(0,0,0,.45), 0 0 0 8px rgba(255,255,255,.06); transform: rotate(1.5deg); transition: transform .6s var(--ease-out); }
+    .hero-card:hover { transform: rotate(0); }
+    .hc-status { display: inline-flex; align-items: center; gap: .5rem; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: .4rem .85rem; border-radius: 999px; background: #dcfce7; color: #166534; }
+    .hc-status .dot { width: 8px; height: 8px; border-radius: 50%; background: #16a34a; animation: pulse 2s infinite; }
+    .hc-status.closed { background: #fee2e2; color: #991b1b; } .hc-status.closed .dot { background: #dc2626; animation: none; }
+    .hc-fee { margin: 1.3rem 0 1rem; } .hc-fee small { display: block; color: var(--muted); font-size: .8rem; } .hc-fee strong { font-family: var(--serif); font-size: 2.6rem; color: var(--green-d); line-height: 1.1; }
+    .hc-fee span { color: var(--muted); font-size: .85rem; }
+    .hc-list { list-style: none; display: grid; gap: .6rem; margin-bottom: 1.5rem; padding-top: 1.2rem; border-top: 1px solid var(--border); }
+    .hc-list li { display: flex; align-items: center; gap: .65rem; font-size: .92rem; font-weight: 500; }
+    .hc-list li::before { content: '✓'; width: 22px; height: 22px; border-radius: 50%; background: var(--green-xl); color: var(--green); font-size: .72rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .hc-btn, .hc-wa { display: block; text-align: center; padding: .9rem; border-radius: 999px; font-weight: 700; font-size: .92rem; text-decoration: none; transition: transform .25s var(--ease-spring), box-shadow .25s; }
+    .hc-btn { background: var(--green-d); color: #fff; } .hc-wa { margin-top: .6rem; background: #25d366; color: #fff; }
+    .hc-btn:hover, .hc-wa:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,.2); }
+
+    /* trust strip */
+    .trust { background: var(--green-d); color: #cdeee8; overflow: hidden; padding: 1rem 0; }
+    .trust-track { display: flex; gap: 3rem; width: max-content; animation: marquee 38s linear infinite; font-weight: 600; font-size: .9rem; letter-spacing: .04em; }
+    .trust-track span::before { content: '✦'; color: var(--gold); margin-right: .8rem; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* booking section */
+    .book-section { background: linear-gradient(180deg, var(--cream), var(--green-xl)); padding: 6.5rem 1.5rem; }
+    .book-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: start; }
+    .steps { margin-top: 2.2rem; display: grid; gap: 1.4rem; }
+    .step { display: flex; gap: 1.1rem; }
+    .step-n { width: 44px; height: 44px; border-radius: 14px; background: var(--green-d); color: var(--gold); font-family: var(--serif); font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step h4 { color: var(--ink); font-size: 1.05rem; margin-bottom: .2rem; } .step p { font-size: .9rem; color: var(--body); }
+    .book-call { margin-top: 2.2rem; display: flex; gap: .8rem; flex-wrap: wrap; }
+    .book-call a { padding: .85rem 1.5rem; border-radius: 999px; font-weight: 700; font-size: .9rem; text-decoration: none; border: 1.5px solid var(--green-d); color: var(--green-d); transition: all .25s; }
+    .book-call a:hover { background: var(--green-d); color: #fff; }
+    .book-card { background: #fff; border-radius: 28px; padding: 2.2rem; box-shadow: var(--shadow-md); border: 1px solid var(--border); }
+    .book-card h3 { font-family: var(--serif); font-size: 1.6rem; color: var(--ink); margin-bottom: .3rem; }
+    .book-card .sub { font-size: .88rem; color: var(--muted); margin-bottom: 1.4rem; }
+
+    /* FAQ */
+    .faq-section { max-width: 860px; margin: 0 auto; padding: 6.5rem 1.5rem 3rem; }
+    .faq-list { margin-top: 2.5rem; display: grid; gap: .8rem; }
+    .faq-list details { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 1.2rem 1.5rem; box-shadow: var(--shadow-sm); transition: box-shadow .25s; }
+    .faq-list details[open] { box-shadow: var(--shadow-md); border-color: var(--green-l); }
+    .faq-list summary { cursor: pointer; font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { content: '+'; color: var(--green); font-size: 1.4rem; line-height: 1; transition: transform .3s; }
+    .faq-list details[open] summary::after { transform: rotate(45deg); }
+    .faq-list details p { margin-top: .8rem; font-size: .93rem; color: var(--body); }
+
+
+    .free-clinic { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .fc-inner { background: linear-gradient(120deg, var(--gold), #f0c46b); border-radius: 28px; padding: 2.2rem 2.6rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; box-shadow: var(--shadow-md); }
+    .fc-tag { font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #6b4a07; }
+    .fc-inner h3 { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.1rem); color: #2a1c02; margin: .3rem 0; }
+    .fc-inner p { color: #4a3305; font-size: .95rem; }
+    .fc-inner a { background: #2a1c02; color: #fff; padding: .95rem 2rem; border-radius: 999px; font-weight: 700; text-decoration: none; }
+
+    /* mobile call bar */
+    .callbar { display: none; }
+    @media (max-width: 900px) {
+      .book-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-card { transform: none; }
+      .callbar { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; padding: .7rem 1rem; background: rgba(250,247,241,.95); backdrop-filter: blur(10px); box-shadow: 0 -4px 20px rgba(0,0,0,.1); }
+      .callbar a { text-align: center; padding: .8rem; border-radius: 999px; font-weight: 700; font-size: .9rem; text-decoration: none; color: #fff; background: var(--green-d); }
+      .callbar a + a { background: #25d366; }
+      body { padding-bottom: 4.5rem; }
+    }
+
+    @media (max-width: 900px) {
+      .hero { padding-top: 4rem; padding-bottom: 5rem; gap: 3rem; }
+      .stats-bar { grid-template-columns: 1fr 1fr; gap: .8rem; margin-top: -2rem; }
+      .stats-bar > *, .stats-bar > *:first-child, .stats-bar > *:last-child { border-radius: 16px; border-right: none; }
+    }
   </style>
 </head>
 <body>
@@ -515,18 +586,19 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#appointment">Live Board</a></li>
+      <li><a href="#book">Book</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#doctors">Doctors</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#location">Contact</a></li>
     </ul>
-    <a href="#appointment" class="nav-appt">Book Appointment</a>
+    <a href="#book" class="nav-appt">Book Appointment</a>
     <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="#appointment">📡 Live Appointment Board</a></li>
+      <li><a href="#book">📅 Book Appointment</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#doctors">Doctors</a></li>
       <li><a href="#location">Contact</a></li>
@@ -536,7 +608,7 @@
 
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Live availability · Book online in seconds</div>
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Specialist care · Bahria Town Phase 8</div>
       <h1 class="hero-title">Quality Healthcare<br/><em>Close to Home.</em></h1>
       <p class="hero-sub">A multi-disciplinary clinic serving Bahria Town Phase 8 and the twin-city community since 2021 — with specialist-led care in Diabetes, Gastroenterology, Radiology, and more.</p>
       <div class="hero-info">
@@ -545,21 +617,25 @@
         <div class="hero-info-item"><div class="hero-info-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.34 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>0330-1531097</div>
       </div>
       <div class="hero-actions">
-        <a href="#appointment" class="btn-white">View Live Board ✦ Book Now</a>
+        <a href="#book" class="btn-white">Book an Appointment</a>
         <a href="#services" class="btn-outline-white">Our Services</a>
       </div>
     </div>
 
     <div class="hero-board">
-      <div class="mini-board">
-        <div class="mini-board-head">
-          <span class="mini-board-title">⌁ NEXT AVAILABLE · TODAY</span>
-          <span class="mini-board-clock" id="miniClock">--:--</span>
-        </div>
-        <div class="mini-rows" id="miniRows">
-          <div class="mini-empty">CONNECTING TO BOARD …</div>
-        </div>
-        <div class="mini-board-foot"><a href="#appointment">VIEW FULL DEPARTURE BOARD →</a></div>
+      <div class="hero-card">
+        <div class="hc-status" id="openStatus"><span class="dot"></span><span id="openText">Open today</span></div>
+        <div class="hc-fee"><small>10+ departments under one roof</small><strong>Complete Care</strong></div>
+        <ul class="hc-list">
+          <li>Diabetes &amp; Endocrinology</li>
+          <li>Gastroenterology</li>
+          <li>Radiology: Ultrasound, X-Ray, CT, MRI</li>
+          <li>Psychology &amp; Counselling</li>
+          <li>Pediatrics, Physiotherapy &amp; Skin Care</li>
+          <li>Laboratory &amp; Home Healthcare</li>
+        </ul>
+        <a class="hc-btn" href="#book">Request an Appointment</a>
+        <a class="hc-wa" href="https://wa.me/923301531097" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -567,48 +643,70 @@
   <div class="stats-bar">
     <div data-reveal><div class="stat-val" data-count="6" data-suffix="+">0</div><div class="stat-label">Specialties</div></div>
     <div data-reveal style="--d:80ms"><div class="stat-val" data-count="2021" data-from="1990" data-plain="1">0</div><div class="stat-label">Established</div></div>
-    <div data-reveal style="--d:160ms"><div class="stat-val" data-count="2500" data-prefix="Rs.">0</div><div class="stat-label">Consultation Fee</div></div>
+    <div data-reveal style="--d:160ms"><div class="stat-val" data-count="10" data-suffix="+">0</div><div class="stat-label">Departments</div></div>
     <div data-reveal style="--d:240ms"><div class="stat-val" data-count="4" data-suffix="+">0</div><div class="stat-label">Specialist Doctors</div></div>
   </div>
 
-  <!-- ════════ DEPARTURE BOARD ════════ -->
-  <section class="board-section" id="appointment">
-    <div class="board-wrap">
-      <p class="section-label" data-reveal>Live Appointment Board</p>
-      <h2 class="section-title" data-reveal style="--d:60ms">Now Boarding: Your Next Check-up.</h2>
-      <p class="section-subtitle" data-reveal style="--d:120ms">Pick a department and a day — every open slot is live. Tap an <strong style="color:var(--green-d)">AVAILABLE</strong> row to reserve it instantly.</p>
+  <div class="trust" aria-hidden="true"><div class="trust-track">
+    <span>Specialist-led care</span><span>Diabetes &amp; GI Center</span><span>CT · MRI · X-Ray · Ultrasound</span><span>Home healthcare &amp; lab sampling</span><span>Serving the twin cities since 2021</span><span>Open 7 days a week</span>
+    <span>Specialist-led care</span><span>Diabetes &amp; GI Center</span><span>CT · MRI · X-Ray · Ultrasound</span><span>Home healthcare &amp; lab sampling</span><span>Serving the twin cities since 2021</span><span>Open 7 days a week</span>
+  </div></div>
 
-      <div class="board-controls" data-reveal style="--d:180ms">
-        <div class="chip-row" id="deptChips"></div>
-        <div class="chip-row" id="dayChips"></div>
+  <!-- ════════ BOOK ════════ -->
+  <section class="book-section" id="book">
+    <div class="book-inner">
+      <div>
+        <p class="section-label" data-reveal>Book a Visit</p>
+        <h2 class="section-title" data-reveal style="--d:60ms">See a specialist, without the wait.</h2>
+        <p class="section-subtitle" data-reveal style="--d:120ms">Send us your preferred day and time. Our team will confirm your slot on WhatsApp or by phone.</p>
+        <div class="steps">
+          <div class="step" data-reveal><div class="step-n">1</div><div><h4>Tell us what you need</h4><p>Choose a department and your preferred day and time.</p></div></div>
+          <div class="step" data-reveal style="--d:80ms"><div class="step-n">2</div><div><h4>Send it on WhatsApp</h4><p>Your request opens in WhatsApp, ready to send to our front desk.</p></div></div>
+          <div class="step" data-reveal style="--d:160ms"><div class="step-n">3</div><div><h4>Get your confirmation</h4><p>We confirm your slot and you walk in. Mon–Sat 9am–9pm, Sun 10am–4pm.</p></div></div>
+        </div>
+        <div class="book-call" data-reveal><a href="tel:03301531097">📞 Call 0330-1531097</a><a href="https://wa.me/923301531097" target="_blank" rel="noopener">WhatsApp us</a></div>
       </div>
-
-      <div class="board" data-reveal style="--d:240ms">
-        <div class="board-top">
-          <span class="board-logo">MMC <span class="plus">✚</span> DEPARTURES</span>
-          <span class="board-clock"><span class="live-dot"></span><span id="boardClock">--:--:--</span><small>PKT</small></span>
-        </div>
-        <div class="board-cols">
-          <span>TIME</span><span>DEPARTMENT</span><span class="col-doc">CONSULTANT</span><span class="col-room">GATE</span><span>STATUS</span>
-        </div>
-        <div class="board-rows" id="boardRows"></div>
-        <div class="board-foot">
-          <span class="legend">
-            <span class="lg lg-open">AVAILABLE — TAP TO BOOK</span>
-            <span class="lg lg-full">FULL</span>
-            <span class="lg lg-closed">CLOSED</span>
-          </span>
-          <span><span class="live-dot"></span>LIVE AVAILABILITY</span>
-        </div>
+      <div class="book-card" data-reveal style="--d:120ms">
+        <h3>Request an appointment</h3>
+        <p class="sub">Takes under a minute. No account needed.</p>
+        <form id="bookForm">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name <span>*</span></label><input type="text" id="b_name" class="form-control" placeholder="e.g. Ahmad Ali" required minlength="2"/></div>
+            <div class="form-group"><label>Phone Number <span>*</span></label><input type="tel" id="b_phone" class="form-control" placeholder="03XX-XXXXXXX" required pattern="[\d+\-\s()]{7,}"/></div>
+          </div>
+          <div class="form-group"><label>Department <span>*</span></label>
+            <select id="b_dept" class="form-control" required>
+              <option value="General Medicine">General Medicine</option>
+              <option value="Diabetes &amp; Endocrinology">Diabetes &amp; Endocrinology</option>
+              <option value="Gastroenterology">Gastroenterology</option>
+              <option value="Radiology &amp; Ultrasound">Radiology &amp; Ultrasound</option>
+              <option value="Psychology &amp; Counselling">Psychology &amp; Counselling</option>
+              <option value="Pediatrics">Pediatrics</option>
+              <option value="Physiotherapy &amp; Rehab">Physiotherapy &amp; Rehab</option>
+              <option value="Laboratory">Laboratory</option>
+              <option value="Skin &amp; Aesthetics">Skin &amp; Aesthetics</option>
+              <option value="Gynecology">Gynecology</option>
+              <option value="Home Healthcare">Home Healthcare</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Preferred Date</label><input type="date" id="b_date" class="form-control"/></div>
+            <div class="form-group"><label>Preferred Time</label>
+              <select id="b_time" class="form-control"><option>Morning (9am–1pm)</option><option>Afternoon (1pm–5pm)</option><option>Evening (5pm–9pm)</option></select>
+            </div>
+          </div>
+          <div class="form-group"><label>Brief Description of Concern</label><textarea id="b_concern" class="form-control" rows="2" placeholder="Symptoms or reason for visit (optional)"></textarea></div>
+          <button type="submit" class="submit-btn"><span class="btn-label">Send Request on WhatsApp</span></button>
+          <p class="form-note">This opens WhatsApp with your details filled in. Nothing is sent until you press send.</p>
+        </form>
       </div>
-      <p class="board-note" id="boardNote"></p>
     </div>
   </section>
 
   <section class="section" id="services">
     <p class="section-label" data-reveal>What We Offer</p>
     <h2 class="section-title" data-reveal style="--d:60ms">Comprehensive Medical Services</h2>
-    <p class="section-subtitle" data-reveal style="--d:120ms">Delivering high-quality, affordable healthcare with a focus on the needs of the local Bahria Town community.</p>
+    <p class="section-subtitle" data-reveal style="--d:120ms">Delivering high-quality healthcare with a focus on the needs of the local Bahria Town community.</p>
     <div class="services-grid">
       <div class="service-card" data-reveal data-dept="general"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div><div class="service-name">General Medicine</div><p class="service-desc">Expert consultation for general health concerns, routine checkups, and management of common illnesses.</p><div class="service-book">Book a visit →</div></div>
       <div class="service-card" data-reveal style="--d:80ms" data-dept="diabetes"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><div class="service-name">Diabetes Center</div><p class="service-desc">Dedicated diabetes management — monitoring, education, and long-term treatment planning with specialist care.</p><div class="service-book">Book a visit →</div></div>
@@ -616,6 +714,12 @@
       <div class="service-card" data-reveal data-dept="radiology"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="7 8 10 12 13 9 16 13"/></svg></div><div class="service-name">Radiology & Diagnostics</div><p class="service-desc">Imaging including Ultrasound, X-Ray, CT Scan and MRI — all available within the local community.</p><div class="service-book">Book a visit →</div></div>
       <div class="service-card" data-reveal style="--d:80ms" data-dept="psychology"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"/></svg></div><div class="service-name">Psychology & Counselling</div><p class="service-desc">Clinical psychology and behavioural science for mental health support and wellbeing assessment.</p><div class="service-book">Book a visit →</div></div>
       <div class="service-card" data-reveal style="--d:160ms" data-dept="general"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg></div><div class="service-name">Pharmacy & Follow-up</div><p class="service-desc">On-site pharmacy support and structured follow-up care to ensure continuity of treatment for all patients.</p><div class="service-book">Book a visit →</div></div>
+      <div class="service-card" data-reveal style="--d:0ms" data-dept="pediatrics"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/></svg></div><div class="service-name">Pediatric Care</div><p class="service-desc">Comprehensive child care: childhood illness management, vaccinations, newborn and child checkups, and growth monitoring.</p><div class="service-book">Book a visit →</div></div>
+      <div class="service-card" data-reveal style="--d:80ms" data-dept="physio"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><div class="service-name">Physiotherapy & Rehab</div><p class="service-desc">Doctors of Physical Therapy for neurological, musculoskeletal and post-surgical rehabilitation, pain and mobility management.</p><div class="service-book">Book a visit →</div></div>
+      <div class="service-card" data-reveal style="--d:160ms" data-dept="lab"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L4 20a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1l-6-11V3"/></svg></div><div class="service-name">Laboratory Services</div><p class="service-desc">In-house laboratory with accurate, timely reporting, plus home sample collection for your convenience.</p><div class="service-book">Book a visit →</div></div>
+      <div class="service-card" data-reveal style="--d:0ms" data-dept="skin"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></div><div class="service-name">Skin & Aesthetics</div><p class="service-desc">Skincare, hair and laser treatments from our aesthetic specialists, with personalised treatment plans.</p><div class="service-book">Book a visit →</div></div>
+      <div class="service-card" data-reveal style="--d:80ms" data-dept="gynae"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg></div><div class="service-name">Gynecology</div><p class="service-desc">Women's health consultations and care from an experienced consultant gynecologist.</p><div class="service-book">Book a visit →</div></div>
+      <div class="service-card" data-reveal style="--d:160ms" data-dept="home"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></div><div class="service-name">Home Healthcare</div><p class="service-desc">Lab sample collection, medical checkups at home, medicine delivery and physiotherapy at your door.</p><div class="service-book">Book a visit →</div></div>
     </div>
   </section>
 
@@ -623,24 +727,25 @@
     <div class="doctors-inner">
       <p class="section-label" data-reveal>Our Team</p>
       <h2 class="section-title" data-reveal style="--d:60ms">Meet Our Specialists</h2>
-      <p class="section-subtitle" data-reveal style="--d:120ms">Led by highly qualified executive directors committed to accessible, patient-first healthcare in Rawalpindi.</p>
-      <div class="doctors-grid">
-        <div class="doctor-card" data-reveal>
-          <div class="doctor-avatar">G</div>
-          <div><div class="doctor-name">Dr. Prof. Ghulam Murtaza Gondal</div><div class="doctor-specialty">Internal Medicine · Executive Director</div><div class="doctor-quals">B.Sc. · MBBS · FCPS (Medicine) · OJT Gastroenterology Master Trainer · Member, International Diabetes Center USA</div></div>
-        </div>
-        <div class="doctor-card" data-reveal style="--d:80ms">
-          <div class="doctor-avatar">S</div>
-          <div><div class="doctor-name">Dr. Sumera Mushtaq Ch.</div><div class="doctor-specialty">Radiology · Executive Director</div><div class="doctor-quals">MBBS · FCPS (Diagnostic Radiology) · Assistant Professor, Foundation University Medical College · Consultant Radiologist, Fauji Foundation Hospital</div></div>
-        </div>
-        <div class="doctor-card" data-reveal>
-          <div class="doctor-avatar">A</div>
-          <div><div class="doctor-name">Ms. Areej Fatima</div><div class="doctor-specialty">Clinical Psychology</div><div class="doctor-quals">Specialising in behavioural science and clinical counselling. One of the most reviewed practitioners at MMC.</div></div>
-        </div>
-        <div class="doctor-card" data-reveal style="--d:80ms">
-          <div class="doctor-avatar">F</div>
-          <div><div class="doctor-name">Ms. Faria Tariq</div><div class="doctor-specialty">Clinical Psychology</div><div class="doctor-quals">Providing psychological assessment and therapeutic support to patients across all age groups.</div></div>
-        </div>
+      <p class="section-subtitle" data-reveal style="--d:120ms">Experienced consultants and therapists across every department, led by our executive directors.</p>
+      <div class="doc-grid">
+        <div class="doc-card" data-reveal style="--d:0ms"><div class="doc-photo"><img src="assets/doctors/gondal.jpg" alt="Dr. Prof. Ghulam Murtaza Gondal" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Prof. Ghulam Murtaza Gondal</div><div class="doc-spec">Internal Medicine · Executive Director</div><p class="doc-quals">B.Sc. · MBBS · FCPS (Medicine) · OJT Gastroenterology Master Trainer · Member, International Diabetes Center USA</p></div></div>
+        <div class="doc-card" data-reveal style="--d:60ms"><div class="doc-photo doc-initial"><span>S</span></div><div class="doc-info"><div class="doc-name">Dr. Sumera Mushtaq Ch.</div><div class="doc-spec">Radiology · Executive Director</div><p class="doc-quals">MBBS · FCPS (Diagnostic Radiology) · Assistant Professor, Foundation University Medical College · Consultant Radiologist, Fauji Foundation Hospital</p></div></div>
+        <div class="doc-card" data-reveal style="--d:120ms"><div class="doc-photo"><img src="assets/doctors/aneesa.jpg" alt="Dr. Aneesa" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Aneesa</div><div class="doc-spec">Radiologist</div></div></div>
+        <div class="doc-card" data-reveal style="--d:180ms"><div class="doc-photo"><img src="assets/doctors/sagheer.jpg" alt="Dr. Syed Sagheer Hussain" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Syed Sagheer Hussain</div><div class="doc-spec">General Surgeon</div></div></div>
+        <div class="doc-card" data-reveal style="--d:0ms"><div class="doc-photo"><img src="assets/doctors/chishti.jpg" alt="Dr. M. A. Chishti" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. M. A. Chishti</div><div class="doc-spec">Child Specialist</div></div></div>
+        <div class="doc-card" data-reveal style="--d:60ms"><div class="doc-photo"><img src="assets/doctors/saima.jpg" alt="Dr. Saima" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Saima</div><div class="doc-spec">Child Specialist</div></div></div>
+        <div class="doc-card" data-reveal style="--d:120ms"><div class="doc-photo"><img src="assets/doctors/sidra.jpg" alt="Dr. Sidra Izhar" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Sidra Izhar</div><div class="doc-spec">Child Specialist</div></div></div>
+        <div class="doc-card" data-reveal style="--d:180ms"><div class="doc-photo"><img src="assets/doctors/saleha.jpg" alt="Dr. Saleha" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Saleha</div><div class="doc-spec">Gynaecologist</div></div></div>
+        <div class="doc-card" data-reveal style="--d:0ms"><div class="doc-photo doc-initial"><span>A</span></div><div class="doc-info"><div class="doc-name">Dr. Arif</div><div class="doc-spec">ENT Specialist</div></div></div>
+        <div class="doc-card" data-reveal style="--d:60ms"><div class="doc-photo doc-initial"><span>T</span></div><div class="doc-info"><div class="doc-name">Dr. Taskeen Iqbal</div><div class="doc-spec">Dermatologist & Skin Aesthetics</div></div></div>
+        <div class="doc-card" data-reveal style="--d:120ms"><div class="doc-photo"><img src="assets/doctors/eman.jpg" alt="Dr. Eman Fatima" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Eman Fatima</div><div class="doc-spec">Physiotherapist (DPT)</div><p class="doc-quals">Neurological rehabilitation, musculoskeletal and post-surgical care, pain and mobility management.</p></div></div>
+        <div class="doc-card" data-reveal style="--d:180ms"><div class="doc-photo"><img src="assets/doctors/kiran.jpg" alt="Dr. Kiran Tariq" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Kiran Tariq</div><div class="doc-spec">Physiotherapist (DPT)</div><p class="doc-quals">Rehabilitation, pain management and mobility restoration.</p></div></div>
+        <div class="doc-card" data-reveal style="--d:0ms"><div class="doc-photo"><img src="assets/doctors/amina.jpg" alt="Dr. Amina Fayyaz" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Amina Fayyaz</div><div class="doc-spec">Physiotherapist</div></div></div>
+        <div class="doc-card" data-reveal style="--d:60ms"><div class="doc-photo"><img src="assets/doctors/sobia.jpg" alt="Dr. Sobia Khateeb" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Sobia Khateeb</div><div class="doc-spec">Psychologist</div></div></div>
+        <div class="doc-card" data-reveal style="--d:120ms"><div class="doc-photo"><img src="assets/doctors/sawera.jpg" alt="Dr. Sawera Mansoor" loading="lazy"/></div><div class="doc-info"><div class="doc-name">Dr. Sawera Mansoor</div><div class="doc-spec">Psychiatrist</div><p class="doc-quals">MBBS (King Edward) · FCPS Psychiatry (Gold Medallist) · Associate Professor, Foundation University Islamabad</p></div></div></div>
+        <div class="doc-card" data-reveal style="--d:180ms"><div class="doc-photo doc-initial"><span>A</span></div><div class="doc-info"><div class="doc-name">Ms. Areej Fatima</div><div class="doc-spec">Clinical Psychology</div><p class="doc-quals">Behavioural science and clinical counselling.</p></div></div>
+        <div class="doc-card" data-reveal style="--d:0ms"><div class="doc-photo doc-initial"><span>F</span></div><div class="doc-info"><div class="doc-name">Ms. Faria Tariq</div><div class="doc-spec">Clinical Psychology</div><p class="doc-quals">Psychological assessment and therapeutic support for all age groups.</p></div></div>
       </div>
     </div>
   </section>
@@ -667,7 +772,7 @@
         <p class="section-label" data-reveal>Why MMC</p>
         <h2 class="section-title" data-reveal style="--d:60ms">Why families in Bahria Town choose MMC.</h2>
         <div class="whyus-list">
-          <div class="why-item" data-reveal><div class="why-num">1</div><div class="why-text"><h4>Affordable & Community-Focused</h4><p>Consultation fees from Rs. 2,000–3,500, committed to the local needs of Bahria Town &amp; surrounding areas.</p></div></div>
+          <div class="why-item" data-reveal><div class="why-num">1</div><div class="why-text"><h4>Community-Focused Care</h4><p>From a free weekly clinic to home healthcare, we are committed to the needs of Bahria Town &amp; surrounding areas.</p></div></div>
           <div class="why-item" data-reveal style="--d:80ms"><div class="why-num">2</div><div class="why-text"><h4>Specialist Diabetes & GI Center</h4><p>A dedicated center-of-excellence for diabetics and patients with gastrointestinal conditions — rare in the area.</p></div></div>
           <div class="why-item" data-reveal style="--d:160ms"><div class="why-num">3</div><div class="why-text"><h4>Full Diagnostic Imaging On-Site</h4><p>Ultrasound, X-Ray, CT Scan and MRI within the complex — no need to travel across the city.</p></div></div>
           <div class="why-item" data-reveal style="--d:240ms"><div class="why-num">4</div><div class="why-text"><h4>Serving Twin Cities Since 2021</h4><p>Inaugurated on 14th August 2021 — now serving the communities of Rawalpindi and Islamabad.</p></div></div>
@@ -681,6 +786,23 @@
       </div>
     </div>
   </div>
+
+  <section class="free-clinic" data-reveal>
+    <div class="fc-inner"><div><span class="fc-tag">Community Care</span><h3>Free Clinic · Every Friday, 4–5 PM</h3><p>Free checkups and medicine for deserving patients. Call 0330-1531097 to confirm the current schedule.</p></div><a href="tel:03301531097">Call to Confirm</a></div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <p class="section-label" data-reveal>Good to Know</p>
+    <h2 class="section-title" data-reveal style="--d:60ms">Frequently asked questions</h2>
+    <div class="faq-list" data-reveal style="--d:120ms">
+      <details><summary>What are your opening hours?</summary><p>Monday to Saturday 9:00 AM – 9:00 PM, and Sunday 10:00 AM – 4:00 PM.</p></details>
+      <details><summary>Do you offer home healthcare?</summary><p>Yes. Our home healthcare service includes laboratory sample collection, medical checkups at home, medicines and drug delivery, and physiotherapy. Call or WhatsApp 0330-1531097 to arrange it.</p></details>
+      <details><summary>Is there a free clinic?</summary><p>Yes. We run a free clinic every Friday from 4 to 5 PM, with free checkups and medicine for deserving patients. Please call to confirm the current schedule.</p></details>
+      <details><summary>Which imaging tests are available on site?</summary><p>Ultrasound, X-Ray, CT Scan and MRI, so you don't need to travel across the city.</p></details>
+      <details><summary>Do I need an appointment?</summary><p>Booking ahead is recommended so we can reserve your slot. Use the form above or call us, and we'll confirm by WhatsApp or phone.</p></details>
+      <details><summary>Where are you located?</summary><p>Abu-Bakr Avenue Commercial, Phase 8, Bahria Town, Rawalpindi. See the map below.</p></details>
+    </div>
+  </section>
 
   <section class="location-section" id="location">
     <p class="section-label" data-reveal>Find Us</p>
@@ -722,7 +844,7 @@
       <div class="footer-top">
         <div>
           <div class="footer-brand-name">Murtaza Medical Complex</div>
-          <p class="footer-brand-desc">A multi-disciplinary health facility committed to affordable, patient-centred care in Bahria Town Phase 8, Rawalpindi.</p>
+          <p class="footer-brand-desc">A multi-disciplinary health facility committed to patient-centred care in Bahria Town Phase 8, Rawalpindi.</p>
           <div class="footer-social">
             <a href="https://www.facebook.com/MurtazaMedicalComplexOfficial/" target="_blank" rel="noopener" class="fb" title="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
             <a href="https://wa.me/923301531097" target="_blank" rel="noopener" class="wa" title="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
@@ -742,8 +864,9 @@
           <div class="footer-col-title">Hospital</div>
           <ul>
             <li><a href="#doctors">Our Doctors</a></li>
-            <li><a href="#appointment">Live Appointment Board</a></li>
+            <li><a href="#book">Book Appointment</a></li>
             <li><a href="#location">Location</a></li>
+            <li><a href="/complaint.html">Feedback &amp; Complaints</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -762,426 +885,69 @@
     </div>
   </footer>
 
-  <!-- ════════ BOOKING MODAL ════════ -->
-  <div class="modal-overlay" id="bookOverlay">
-    <div class="modal">
-      <div class="modal-ticket-head">
-        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-        <div class="mt-label">APPOINTMENT · BOARDING DETAILS</div>
-        <div class="mt-main">
-          <div>
-            <div class="mt-dept" id="mDept">—</div>
-            <div class="mt-sub" id="mDoc">—</div>
-          </div>
-          <div class="mt-time">
-            <div class="tt" id="mTime">--:--</div>
-            <div class="td" id="mDate">—</div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-body">
-        <form id="bookForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Full Name <span>*</span></label>
-              <input type="text" id="b_name" class="form-control" placeholder="e.g. Ahmad Ali" required minlength="2"/>
-            </div>
-            <div class="form-group">
-              <label>Phone Number <span>*</span></label>
-              <input type="tel" id="b_phone" class="form-control" placeholder="03XX-XXXXXXX" required pattern="[\d+\-\s()]{7,}"/>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Age</label>
-              <input type="number" id="b_age" class="form-control" placeholder="Your age" min="1" max="120"/>
-            </div>
-            <div class="form-group">
-              <label>Gender</label>
-              <select id="b_gender" class="form-control">
-                <option value="">Select</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Prefer not to say</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Brief Description of Concern</label>
-            <textarea id="b_concern" class="form-control" rows="2" placeholder="Symptoms or reason for visit (optional)"></textarea>
-          </div>
-          <div class="hp" aria-hidden="true">
-            <label>Website</label>
-            <input type="text" id="b_website" tabindex="-1" autocomplete="off"/>
-          </div>
-          <button type="submit" class="submit-btn" id="bookBtn"><span class="spinner"></span><span class="btn-label">Reserve This Slot</span></button>
-          <p class="form-note">Your slot is reserved instantly and our team confirms by phone or WhatsApp.</p>
-        </form>
-
-        <div class="pass" id="passView">
-          <div class="pass-card">
-            <div class="pass-head">
-              <span class="ph-t">MMC ✚ APPOINTMENT PASS</span>
-              <span class="ph-r" id="pRef">MMC-—</span>
-            </div>
-            <div class="pass-body">
-              <div class="pf"><div class="pf-l">Patient</div><div class="pf-v" id="pName">—</div></div>
-              <div class="pf"><div class="pf-l">Department</div><div class="pf-v" id="pDept">—</div></div>
-              <div class="pf"><div class="pf-l">Date</div><div class="pf-v" id="pDate">—</div></div>
-              <div class="pf"><div class="pf-l">Time</div><div class="pf-v" id="pTime">—</div></div>
-              <div class="pf"><div class="pf-l">Consultant</div><div class="pf-v" id="pDoc">—</div></div>
-              <div class="pf"><div class="pf-l">Gate / Room</div><div class="pf-v" id="pRoom">—</div></div>
-            </div>
-            <div class="pass-barcode"></div>
-            <div class="pass-status" id="pStatus">⏳ Pending confirmation — our team will contact you shortly.</div>
-          </div>
-          <div class="pass-actions">
-            <a class="wa-btn" id="pWa" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.4A12.1 12.1 0 0 0 12 0 12 12 0 0 0 1.7 18L0 24l6.3-1.7A12 12 0 0 0 24 12a12 12 0 0 0-3.5-8.6zM12 22a10 10 0 0 1-5.2-1.4l-.4-.2-3.7 1 1-3.7-.3-.4A10 10 0 1 1 12 22zm5.5-7.5c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7 0a8.3 8.3 0 0 1-4.1-3.6c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4a3.8 3.8 0 0 0-1.2 2.9 6.6 6.6 0 0 0 1.4 3.5 15.2 15.2 0 0 0 5.8 5.1c2.2.9 2.2.6 2.6.6a3.5 3.5 0 0 0 2.3-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.1-.3-.2-.5-.3z"/></svg>
-              Confirm on WhatsApp
-            </a>
-            <button class="done-btn" id="pDone">Done</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="callbar"><a href="tel:03301531097">📞 Call</a><a href="https://wa.me/923301531097" target="_blank" rel="noopener">WhatsApp</a></div>
 
   <div class="toasts" id="toasts"></div>
 
   <script>
-    // ════════════════ data ════════════════
-    const DEPTS = [
-      { id:'general',    name:'General Medicine',         doctor:'Dr. Prof. G. M. Gondal',       room:'ROOM 1' },
-      { id:'diabetes',   name:'Diabetes & Endocrinology', doctor:'Dr. Prof. G. M. Gondal',       room:'ROOM 1' },
-      { id:'gastro',     name:'Gastroenterology',         doctor:'Dr. Prof. G. M. Gondal',       room:'ROOM 2' },
-      { id:'radiology',  name:'Radiology & Ultrasound',   doctor:'Dr. Sumera Mushtaq Ch.',       room:'IMAGING' },
-      { id:'psychology', name:'Psychology & Counselling', doctor:'Ms. A. Fatima / Ms. F. Tariq', room:'ROOM 3' },
-    ];
     const WA_NUMBER = '923301531097';
-    const PK_OFFSET = 5 * 60 * 60 * 1000;
-    const DAY_NAMES = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
-    const MON_NAMES = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-
-    const state = { dept: 'general', date: null, api: null, slots: [], loading: false };
-
-    // ════════════════ helpers ════════════════
     const $ = (s) => document.querySelector(s);
-    const nowPK = () => new Date(Date.now() + PK_OFFSET);
-    const todayPK = () => nowPK().toISOString().slice(0, 10);
-    const pad = (n) => String(n).padStart(2, '0');
-    const parseTime = (t) => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
-    const deptById = (id) => DEPTS.find(d => d.id === id) || DEPTS[0];
-    const fmtDateNice = (ds) => { const d = new Date(ds + 'T00:00:00Z'); return `${DAY_NAMES[d.getUTCDay()]} ${d.getUTCDate()} ${MON_NAMES[d.getUTCMonth()]}`; };
-    const fmt12 = (t) => { let [h, m] = t.split(':').map(Number); const ap = h >= 12 ? 'PM' : 'AM'; h = h % 12 || 12; return `${h}:${pad(m)} ${ap}`; };
-
-    function hoursFor(ds) { const day = new Date(ds + 'T00:00:00Z').getUTCDay(); return day === 0 ? {start:600,end:960} : {start:540,end:1260}; }
-    function slotTimesFor(ds) { const {start,end} = hoursFor(ds); const out = []; for (let m = start; m < end; m += 30) out.push(`${pad(Math.floor(m/60))}:${pad(m%60)}`); return out; }
-    function isPastSlot(ds, t) {
-      const today = todayPK();
-      if (ds < today) return true;
-      if (ds > today) return false;
-      const d = nowPK();
-      return parseTime(t) <= d.getUTCHours() * 60 + d.getUTCMinutes();
-    }
 
     function toast(msg, type = '') {
       const el = document.createElement('div');
-      el.className = 'toast ' + type;
-      el.textContent = msg;
+      el.className = 'toast ' + type; el.textContent = msg;
       $('#toasts').appendChild(el);
       setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 350); }, 3400);
     }
 
-    // ════════════════ split-flap engine ════════════════
-    const FLAP_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:·-/& ';
-    const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // open / closed badge (Pakistan time)
+    (function openNow() {
+      const d = new Date(Date.now() + 5 * 3600000);
+      const day = d.getUTCDay(), m = d.getUTCHours() * 60 + d.getUTCMinutes();
+      const [a, b] = day === 0 ? [600, 960] : [540, 1260];
+      const open = m >= a && m < b;
+      $('#openStatus').classList.toggle('closed', !open);
+      $('#openText').textContent = open ? `Open now · until ${day === 0 ? '4 PM' : '9 PM'}` : 'Closed now · see hours below';
+    })();
 
-    function flapTo(el, text, baseDelay = 0) {
-      el.classList.add('flap');
-      el.innerHTML = '';
-      [...text.toUpperCase()].forEach((target, i) => {
-        const span = document.createElement('span');
-        span.className = 'fc';
-        span.textContent = ' ';
-        el.appendChild(span);
-        if (REDUCED) { span.textContent = target; return; }
-        const steps = 3 + Math.floor(Math.random() * 5);
-        let step = 0;
-        setTimeout(() => {
-          const iv = setInterval(() => {
-            step++;
-            if (step >= steps) {
-              span.textContent = target;
-              clearInterval(iv);
-            } else {
-              span.textContent = FLAP_CHARS[Math.floor(Math.random() * FLAP_CHARS.length)];
-            }
-            span.classList.remove('flick'); void span.offsetWidth; span.classList.add('flick');
-          }, 46);
-        }, baseDelay + i * 26);
-      });
-    }
-
-    // ════════════════ clocks ════════════════
-    function tickClocks() {
-      const d = nowPK();
-      const hms = `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}`;
-      const bc = $('#boardClock'); if (bc) bc.textContent = hms;
-      const mc = $('#miniClock'); if (mc) mc.textContent = hms.slice(0, 5) + ' PKT';
-    }
-    setInterval(tickClocks, 1000); tickClocks();
-
-    // ════════════════ controls ════════════════
-    function renderDeptChips() {
-      const wrap = $('#deptChips');
-      wrap.innerHTML = '';
-      DEPTS.forEach(d => {
-        const b = document.createElement('button');
-        b.className = 'chip' + (d.id === state.dept ? ' active' : '');
-        b.textContent = d.name.toUpperCase();
-        b.onclick = () => { state.dept = d.id; renderDeptChips(); loadBoard(); };
-        wrap.appendChild(b);
-      });
-    }
-
-    function renderDayChips() {
-      const wrap = $('#dayChips');
-      wrap.innerHTML = '';
-      const base = new Date(todayPK() + 'T00:00:00Z').getTime();
-      for (let i = 0; i < 7; i++) {
-        const ds = new Date(base + i * 86400000).toISOString().slice(0, 10);
-        const d = new Date(ds + 'T00:00:00Z');
-        const b = document.createElement('button');
-        b.className = 'chip' + (ds === state.date ? ' active' : '');
-        b.innerHTML = `${i === 0 ? 'TODAY' : DAY_NAMES[d.getUTCDay()]} ${d.getUTCDate()}<span class="chip-sub">${MON_NAMES[d.getUTCMonth()]}</span>`;
-        b.onclick = () => { state.date = ds; renderDayChips(); loadBoard(); };
-        wrap.appendChild(b);
-      }
-    }
-
-    // ════════════════ board ════════════════
-    function showSkeleton() {
-      const rows = $('#boardRows');
-      rows.innerHTML = '';
-      for (let i = 0; i < 8; i++) {
-        const r = document.createElement('div');
-        r.className = 'sk-row';
-        r.innerHTML = `<div class="sk" style="width:70%"></div><div class="sk" style="width:85%"></div><div class="sk sk-doc" style="width:75%"></div><div class="sk sk-room" style="width:60%"></div><div class="sk" style="width:80%"></div>`;
-        rows.appendChild(r);
-      }
-    }
-
-    async function fetchSlots() {
-      if (state.api === false) {
-        return slotTimesFor(state.date).map(t => ({ time: t, status: isPastSlot(state.date, t) ? 'past' : 'open' }));
-      }
-      const r = await fetch(`/api/slots?date=${state.date}&dept=${state.dept}`);
-      if (!r.ok) throw new Error('slots fetch failed');
-      return (await r.json()).slots;
-    }
-
-    const STATUS_TEXT = { open: 'AVAILABLE', full: 'FULL', blocked: 'CLOSED', past: 'DEPARTED' };
-    const STATUS_CLASS = { open: 'st-open', full: 'st-full', blocked: 'st-blocked', past: 'st-past' };
-
-    async function loadBoard() {
-      if (state.loading) return;
-      state.loading = true;
-      showSkeleton();
-      try {
-        state.slots = await fetchSlots();
-      } catch {
-        state.api = false;
-        state.slots = slotTimesFor(state.date).map(t => ({ time: t, status: isPastSlot(state.date, t) ? 'past' : 'open' }));
-        $('#boardNote').className = 'board-note offline';
-        $('#boardNote').textContent = 'Live availability is temporarily offline — your booking will be sent via WhatsApp instead.';
-      }
-      state.loading = false;
-      renderBoard();
-    }
-
-    function renderBoard() {
-      const dept = deptById(state.dept);
-      const rows = $('#boardRows');
-      rows.innerHTML = '';
-      state.slots.forEach((slot, i) => {
-        const row = document.createElement('div');
-        row.className = 'board-row' + (slot.status === 'open' ? ' is-open' : '') + (slot.status === 'past' ? ' is-dim' : '');
-        row.style.setProperty('--rd', `${Math.min(i * 22, 500)}ms`);
-        row.innerHTML = `
-          <span class="cell-time"></span>
-          <span class="cell-dept">${dept.name}</span>
-          <span class="cell-doc">${dept.doctor}</span>
-          <span class="cell-room">${dept.room}</span>
-          <span class="cell-status ${STATUS_CLASS[slot.status]}"></span>`;
-        rows.appendChild(row);
-        flapTo(row.querySelector('.cell-time'), slot.time, i * 18);
-        flapTo(row.querySelector('.cell-status'), STATUS_TEXT[slot.status], i * 18 + 120);
-        if (slot.status === 'open') row.onclick = () => openModal(slot.time);
-      });
-      if (!state.slots.length) {
-        rows.innerHTML = '<div class="mini-empty" style="padding:2rem">NO SLOTS SCHEDULED FOR THIS DAY</div>';
-      }
-    }
-
-    // hero mini board: next open General Medicine slots today
-    async function loadMiniBoard() {
-      const wrap = $('#miniRows');
-      let open = [];
-      try {
-        if (state.api === false) throw new Error();
-        const r = await fetch(`/api/slots?date=${todayPK()}&dept=general`);
-        open = (await r.json()).slots.filter(s => s.status === 'open').slice(0, 3);
-      } catch {
-        open = slotTimesFor(todayPK()).filter(t => !isPastSlot(todayPK(), t)).slice(0, 3).map(t => ({ time: t }));
-      }
-      wrap.innerHTML = '';
-      if (!open.length) {
-        wrap.innerHTML = '<div class="mini-empty">FULLY BOOKED TODAY — SEE THE BOARD FOR TOMORROW</div>';
-        return;
-      }
-      open.forEach((s, i) => {
-        const row = document.createElement('div');
-        row.className = 'mini-row';
-        row.innerHTML = `<span class="t"></span><span class="d">General Medicine · Room 1</span><span class="s">OPEN</span>`;
-        row.onclick = () => {
-          state.dept = 'general'; state.date = todayPK();
-          renderDeptChips(); renderDayChips(); loadBoard();
-          document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
-        };
-        wrap.appendChild(row);
-        flapTo(row.querySelector('.t'), s.time, 300 + i * 140);
-      });
-    }
-
-    // ════════════════ booking modal ════════════════
-    let selectedTime = null;
-
-    function openModal(time) {
-      selectedTime = time;
-      const dept = deptById(state.dept);
-      $('#mDept').textContent = dept.name;
-      $('#mDoc').textContent = `${dept.doctor} · ${dept.room}`;
-      $('#mTime').textContent = time;
-      $('#mDate').textContent = fmtDateNice(state.date);
-      $('#bookForm').style.display = '';
-      $('#passView').classList.remove('show');
-      const ov = $('#bookOverlay');
-      ov.classList.add('show');
-      requestAnimationFrame(() => ov.classList.add('visible'));
-      document.body.style.overflow = 'hidden';
-      setTimeout(() => $('#b_name').focus(), 350);
-    }
-
-    function closeModal() {
-      const ov = $('#bookOverlay');
-      ov.classList.remove('visible');
-      setTimeout(() => { ov.classList.remove('show'); document.body.style.overflow = ''; }, 300);
-    }
-    $('#modalClose').onclick = closeModal;
-    $('#pDone').onclick = () => { closeModal(); };
-    $('#bookOverlay').addEventListener('click', (e) => { if (e.target === e.currentTarget) closeModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-
-    function waMessage(appt) {
-      const dept = deptById(appt.dept);
-      return `🏥 *New Appointment Booking*\n*Murtaza Medical Complex*\n` +
-        `━━━━━━━━━━━━━━━━━━━━\n` +
-        `🔖 *Ref:* ${appt.ref || 'Walk-in'}\n` +
-        `👤 *Patient:* ${appt.name}\n` +
-        `📞 *Phone:* ${appt.phone}\n` +
-        `🏥 *Department:* ${dept.name}\n` +
-        `👨‍⚕️ *Consultant:* ${dept.doctor}\n` +
-        `📍 *Room:* ${dept.room}\n` +
-        `📅 *Date:* ${appt.date}\n` +
-        `🕐 *Time:* ${fmt12(appt.time)}\n` +
-        `📝 *Concern:* ${appt.concern || 'Not specified'}\n` +
-        `━━━━━━━━━━━━━━━━━━━━\n` +
-        `_Booked via murtazamedicalcomplex.netlify.app_`;
-    }
-
-    $('#bookForm').addEventListener('submit', async function (e) {
+    // booking form -> WhatsApp
+    const dateEl = $('#b_date');
+    dateEl.min = new Date(Date.now() + 5 * 3600000).toISOString().slice(0, 10);
+    $('#bookForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      const btn = $('#bookBtn');
-      const payload = {
-        name: $('#b_name').value.trim(),
-        phone: $('#b_phone').value.trim(),
-        age: $('#b_age').value.trim(),
-        gender: $('#b_gender').value,
-        concern: $('#b_concern').value.trim(),
-        website: $('#b_website').value, // honeypot
-        dept: state.dept, date: state.date, time: selectedTime,
-      };
-
-      btn.disabled = true; btn.classList.add('loading');
-      btn.querySelector('.btn-label').textContent = 'Reserving…';
-
-      let appt = null;
-      if (state.api !== false) {
-        try {
-          const r = await fetch('/api/book', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-          const data = await r.json();
-          if (!r.ok) {
-            toast(data.error || 'Could not reserve that slot.', 'err');
-            btn.disabled = false; btn.classList.remove('loading');
-            btn.querySelector('.btn-label').textContent = 'Reserve This Slot';
-            if (r.status === 409) { closeModal(); loadBoard(); }
-            return;
-          }
-          appt = data.appointment;
-        } catch {
-          state.api = false; // fall through to WhatsApp
-        }
-      }
-
-      if (!appt) {
-        appt = { ...payload, ref: null };
-        $('#pStatus').textContent = '📲 Request sent via WhatsApp — our team will confirm shortly.';
-      } else {
-        $('#pStatus').textContent = '✅ Booked — a WhatsApp notification has been sent to MMC.';
-        loadBoard(); loadMiniBoard();
-      }
-
-      // Always auto-notify MMC via WhatsApp on every booking
-      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMessage({ ...payload, ref: appt.ref }))}`, '_blank');
-
-      // boarding pass
-      const dept = deptById(state.dept);
-      $('#pRef').textContent = appt.ref || 'MMC-WA';
-      $('#pName').textContent = payload.name;
-      $('#pDept').textContent = dept.name;
-      $('#pDate').textContent = fmtDateNice(state.date);
-      $('#pTime').textContent = fmt12(selectedTime);
-      $('#pDoc').textContent = dept.doctor;
-      $('#pRoom').textContent = dept.room;
-      $('#pWa').href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMessage({ ...payload, ref: appt.ref }))}`;
-      $('#bookForm').style.display = 'none';
-      $('#passView').classList.add('show');
-      btn.disabled = false; btn.classList.remove('loading');
-      btn.querySelector('.btn-label').textContent = 'Reserve This Slot';
+      const when = dateEl.value ? new Date(dateEl.value + 'T00:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' }) : 'Any day';
+      const msg = `🏥 *Appointment Request*\n*Murtaza Medical Complex*\n━━━━━━━━━━━━━━━━━━━━\n` +
+        `👤 *Patient:* ${$('#b_name').value.trim()}\n📞 *Phone:* ${$('#b_phone').value.trim()}\n` +
+        `🏥 *Department:* ${$('#b_dept').value}\n📅 *Preferred date:* ${when}\n🕐 *Preferred time:* ${$('#b_time').value}\n` +
+        `📝 *Concern:* ${$('#b_concern').value.trim() || 'Not specified'}\n━━━━━━━━━━━━━━━━━━━━`;
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+      toast('Opening WhatsApp. Press send to finish your request.', 'ok');
       this.reset();
-      toast('Slot reserved — see your appointment pass!', 'ok');
     });
 
-    // ════════════════ counters ════════════════
+    // service cards -> form
+    document.querySelectorAll('.service-card[data-dept]').forEach(card => {
+      card.addEventListener('click', () => {
+        const map = { general: 'General Medicine', diabetes: 'Diabetes & Endocrinology', gastro: 'Gastroenterology', radiology: 'Radiology & Ultrasound', psychology: 'Psychology & Counselling', pediatrics: 'Pediatrics', physio: 'Physiotherapy & Rehab', lab: 'Laboratory', skin: 'Skin & Aesthetics', gynae: 'Gynecology', home: 'Home Healthcare' };
+        $('#b_dept').value = map[card.dataset.dept];
+        $('#book').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // counters
     function animateCounter(el) {
-      const to = parseFloat(el.dataset.count);
-      const from = parseFloat(el.dataset.from || 0);
-      const prefix = el.dataset.prefix || '';
-      const suffix = el.dataset.suffix || '';
-      const dur = 1400;
+      const to = parseFloat(el.dataset.count), from = parseFloat(el.dataset.from || 0);
+      const prefix = el.dataset.prefix || '', suffix = el.dataset.suffix || '';
       const start = performance.now();
-      function tick(now) {
-        const p = Math.min((now - start) / dur, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
+      (function tick(now) {
+        const p = Math.min((now - start) / 1400, 1), eased = 1 - Math.pow(1 - p, 3);
         const n = Math.round(from + (to - from) * eased);
         el.textContent = prefix + (el.dataset.plain ? n : n.toLocaleString()) + suffix;
         if (p < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
+      })(start);
     }
 
-    // ════════════════ scroll reveal ════════════════
+    // scroll reveal
     const revealObs = new IntersectionObserver((entries) => {
       entries.forEach(en => {
         if (en.isIntersecting) {
@@ -1194,48 +960,20 @@
     }, { threshold: 0.18 });
     document.querySelectorAll('[data-reveal]').forEach(el => revealObs.observe(el));
 
-    // ════════════════ service cards → board ════════════════
-    document.querySelectorAll('.service-card[data-dept]').forEach(card => {
-      card.addEventListener('click', () => {
-        state.dept = card.dataset.dept;
-        renderDeptChips(); loadBoard();
-        document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    // ════════════════ mobile menu ════════════════
+    // mobile menu
     const burger = $('#burger'), mobileMenu = $('#mobileMenu');
     burger.onclick = () => { burger.classList.toggle('open'); mobileMenu.classList.toggle('open'); };
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       burger.classList.remove('open'); mobileMenu.classList.remove('open');
     }));
 
-    // ════════════════ smooth scroll ════════════════
+    // smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const t = document.querySelector(a.getAttribute('href'));
         if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
       });
     });
-
-    // ════════════════ init ════════════════
-    (async function init() {
-      state.date = todayPK();
-      renderDeptChips();
-      renderDayChips();
-      try {
-        const r = await fetch('/api/health', { signal: AbortSignal.timeout(4000) });
-        state.api = r.ok;
-      } catch { state.api = false; }
-      if (state.api === false) {
-        $('#boardNote').className = 'board-note offline';
-        $('#boardNote').textContent = 'Live availability is temporarily offline — bookings will be sent via WhatsApp instead.';
-      }
-      loadBoard();
-      loadMiniBoard();
-      // refresh availability every 60s
-      setInterval(() => { if (state.api) { loadBoard(); loadMiniBoard(); } }, 60000);
-    })();
   </script>
 </body>
 </html>

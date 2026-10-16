@@ -28,3 +28,13 @@
   from = "/admin"
   to = "/admin.html"
   status = 200
+
+[[redirects]]
+  from = "/complaint"
+  to = "/complaint.html"
+  status = 200
+
+[[redirects]]
+  from = "/supabase/*"
+  to = "/index.html"
+  status = 404

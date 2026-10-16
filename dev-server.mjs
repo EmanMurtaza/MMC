@@ -36,6 +36,8 @@ http.createServer(async (req, res) => {
 
   let file = url.pathname === "/" ? "/index.html" : url.pathname;
   if (file === "/admin") file = "/admin.html";
+  if (file === "/complaint") file = "/complaint.html";
+  if (file.startsWith("/supabase")) { res.writeHead(404); res.end("Not found"); return; }
   try {
     const data = await fs.readFile(path.join(process.cwd(), file));
     res.writeHead(200, { "Content-Type": MIME[path.extname(file)] || "application/octet-stream" });

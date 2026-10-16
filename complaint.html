@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback &amp; Complaints — Murtaza Medical Complex</title>
+  <meta name="robots" content="noindex"/>
+  <meta name="theme-color" content="#0a3d38"/>
+  <link rel="icon" href="assets/logo.png" type="image/png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --teal:#0a3d38; --teal-m:#0f766e; --gold:#e0a43c; --cream:#faf7f1; --ink:#10211f; --body:#3f514e; --muted:#73857f; --line:#e3ebe8; }
+    body { font-family:'Plus Jakarta Sans',system-ui,sans-serif; color:var(--body); min-height:100vh; -webkit-font-smoothing:antialiased;
+      background: radial-gradient(ellipse 60% 40% at 90% 0%, rgba(224,164,60,.2), transparent 60%), linear-gradient(160deg,#06302c,#0a3d38 60%,#0f5a52); padding:1.2rem; }
+    .wrap { max-width: 560px; margin: 0 auto; }
+    .brand { display:flex; align-items:center; gap:.8rem; color:#fff; text-decoration:none; padding:.6rem 0 1.4rem; }
+    .brand img { width:46px; height:46px; border-radius:50%; background:#fff; object-fit:contain; }
+    .brand b { font-family:'Fraunces',serif; font-size:1.15rem; display:block; line-height:1.2; }
+    .brand small { font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; opacity:.7; }
+    .card { background:#fff; border-radius:26px; padding:2rem 1.6rem; box-shadow:0 30px 70px rgba(0,0,0,.35); }
+    h1 { font-family:'Fraunces',serif; font-size:1.8rem; color:var(--ink); line-height:1.15; letter-spacing:-.02em; }
+    .lead { margin:.6rem 0 1.5rem; font-size:.95rem; }
+    label { display:block; font-size:.8rem; font-weight:600; color:var(--ink); margin-bottom:.35rem; }
+    label span { color:#dc2626; } label em { font-style:normal; font-weight:400; color:var(--muted); }
+    input, select, textarea { width:100%; font:inherit; font-size:.95rem; padding:.8rem .95rem; border:1.5px solid var(--line); border-radius:12px; background:#fff; color:var(--ink); transition:border-color .2s, box-shadow .2s; }
+    input:focus, select:focus, textarea:focus { outline:none; border-color:var(--teal-m); box-shadow:0 0 0 4px rgba(15,118,110,.12); }
+    textarea { resize:vertical; min-height:120px; }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; } .field { margin-bottom:1rem; }
+    .hp { position:absolute; left:-9999px; }
+    button { width:100%; margin-top:.4rem; padding:1rem; border:none; border-radius:999px; background:var(--teal); color:#fff; font:inherit; font-weight:700; font-size:1rem; cursor:pointer; transition:transform .2s, box-shadow .2s, opacity .2s; }
+    button:hover { transform:translateY(-2px); box-shadow:0 12px 26px rgba(10,61,56,.3); } button:disabled { opacity:.6; cursor:wait; transform:none; }
+    .note { margin-top:1rem; font-size:.78rem; color:var(--muted); text-align:center; }
+    .err { background:#fee2e2; color:#991b1b; padding:.8rem 1rem; border-radius:12px; font-size:.88rem; margin-bottom:1rem; display:none; }
+    .done { text-align:center; display:none; padding:1rem 0; }
+    .done .tick { width:72px; height:72px; border-radius:50%; background:#dcfce7; color:#16a34a; font-size:2.2rem; display:flex; align-items:center; justify-content:center; margin:0 auto 1.2rem; }
+    .done a { display:inline-block; margin-top:1.4rem; color:var(--teal-m); font-weight:700; text-decoration:none; }
+    @media (max-width:480px){ .row{ grid-template-columns:1fr; gap:0; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="assets/logo.png" alt=""/><div><b>Murtaza Medical Complex</b><small>Bahria Town Phase 8 · Rawalpindi</small></div></a>
+
+    <div class="card">
+      <form id="f">
+        <h1>Tell us how we can do better.</h1>
+        <p class="lead">Your feedback goes straight to our management team. Name and phone are optional, so you can stay anonymous.</p>
+        <div class="err" id="err"></div>
+
+        <div class="row">
+          <div class="field"><label>Your name <em>(optional)</em></label><input id="name" maxlength="100" autocomplete="name"/></div>
+          <div class="field"><label>Phone <em>(optional)</em></label><input id="phone" type="tel" maxlength="30" autocomplete="tel" placeholder="03XX-XXXXXXX"/></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Type <span>*</span></label>
+            <select id="category" required>
+              <option>Staff behaviour</option><option>Doctor / treatment</option><option>Waiting time</option><option>Cleanliness</option><option>Billing</option><option>Facilities</option><option>Suggestion</option><option selected>Other</option>
+            </select></div>
+          <div class="field"><label>Department <em>(optional)</em></label>
+            <select id="department"><option value="">Not sure</option><option>General Medicine</option><option>Diabetes &amp; Endocrinology</option><option>Gastroenterology</option><option>Radiology</option><option>Laboratory</option><option>Pediatrics</option><option>Gynecology</option><option>Physiotherapy</option><option>Psychology / Psychiatry</option><option>Skin &amp; Aesthetics</option><option>Pharmacy</option><option>Reception</option></select></div>
+        </div>
+        <div class="field"><label>Your complaint or feedback <span>*</span></label><textarea id="message" required minlength="5" maxlength="2000" placeholder="Please tell us what happened…"></textarea></div>
+        <input class="hp" id="website" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+        <button id="btn" type="submit">Submit</button>
+        <p class="note">We read every message. If you left a phone number we may contact you.</p>
+      </form>
+
+      <div class="done" id="done">
+        <div class="tick">✓</div>
+        <h1>Thank you.</h1>
+        <p class="lead">Your message has been received by our management team.</p>
+        <a href="/">← Back to website</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const C = window.MMC_CONFIG || {};
+    const db = (C.SUPABASE_URL && C.SUPABASE_ANON_KEY && window.supabase) ? supabase.createClient(C.SUPABASE_URL, C.SUPABASE_ANON_KEY) : null;
+    const showErr = (m) => { $('err').textContent = m; $('err').style.display = 'block'; };
+
+    $('f').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      $('err').style.display = 'none';
+      if ($('website').value) { $('f').style.display = 'none'; $('done').style.display = 'block'; return; } // honeypot: pretend success
+      if (!db) return showErr('The complaint system is not set up yet. Please call 0330-1531097.');
+      $('btn').disabled = true; $('btn').textContent = 'Sending…';
+      const { error } = await db.from('complaints').insert({
+        name: $('name').value.trim() || null,
+        phone: $('phone').value.trim() || null,
+        category: $('category').value,
+        department: $('department').value || null,
+        message: $('message').value.trim(),
+      });
+      if (error) {
+        $('btn').disabled = false; $('btn').textContent = 'Submit';
+        return showErr('Could not send your message. Please try again or call 0330-1531097.');
+      }
+      $('f').style.display = 'none'; $('done').style.display = 'block'; window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+</html>

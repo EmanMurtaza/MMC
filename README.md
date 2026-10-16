@@ -35,3 +35,14 @@ Public: `GET /api/health`, `GET /api/meta`, `GET /api/slots?date&dept`, `POST /a
 Admin (Bearer token from `POST /api/login`): `GET/PATCH/DELETE /api/admin/appointments`, `GET /api/admin/schedule?date`, `POST/DELETE /api/admin/block`, `GET /api/admin/stats`
 
 Clinic hours encoded in the API: Mon–Sat 09:00–21:00, Sun 10:00–16:00, 30-minute slots, bookable up to 30 days ahead (Pakistan time).
+
+## Admin panel (Supabase) — complaints & inventory
+
+`admin.html` (`/admin`) now runs on Supabase. Appointments are no longer handled here (the public site sends booking requests via WhatsApp).
+
+1. Create a Supabase project, then run `supabase/schema.sql` in the SQL Editor.
+2. Put the Project URL and **anon** key in `config.js`. Never use the `service_role` key.
+3. Authentication → Users → Add user (your admin login). Turn **off** "Allow new users to sign up".
+4. Sign in at `/admin`. The **QR Code** tab makes a printable poster that links to `/complaint.html`.
+
+Public visitors can only *submit* complaints (row-level security). Only signed-in admins can read or edit anything.
